@@ -1,0 +1,109 @@
+{
+ "about": [
+  "What the ignore region renders, asked in the worlds its views ask it, each handed what the region declares it reads."
+ ],
+ "worlds": {
+  "root:obligations": {
+   "lines": [
+    "bound-lock/1 about=\"what a repository of the place never holds: the store, what is built, what is installed, and the build record\" at=witness:the-place-carried-the-pipeline-of-another-registry by=target form=alphabet measure=id role=writes scope=ignore value=.bound/|dist/|node_modules/|.cache/"
+   ],
+   "regions": {}
+  },
+  "root:topos-node": {
+   "lines": [
+    "bound-lock/1 about=\"what a repository of the place never holds: the store, what is built, what is installed, and the build record\" at=witness:a-topos-that-was-not-a-place by=target form=alphabet measure=id role=writes scope=ignore value=.bound/|dist/|node_modules/|.cache/"
+   ],
+   "regions": {}
+  },
+  "root:topos-github": {
+   "lines": [
+    "bound-lock/1 about=\"what a repository of the place never holds: the store, what is built, what is installed, and the build record\" at=witness:a-topos-that-was-not-a-place by=target form=alphabet measure=id role=writes scope=ignore value=.bound/|dist/|node_modules/|.cache/"
+   ],
+   "regions": {}
+  },
+  "root:verify": {
+   "lines": [
+    "bound-lock/1 at=policy:place by=target form=alphabet measure=id role=writes scope=ignore value=.bound/|dist/|node_modules/|.cache/"
+   ],
+   "regions": {}
+  }
+ },
+ "cases": [
+  {
+   "name": "root:obligations · ignore@3 · .gitignore",
+   "world": "root:obligations",
+   "request": {
+    "region": "ignore",
+    "at": 3,
+    "shape": ".gitignore",
+    "name": "obligations",
+    "reads": [
+     "ignore"
+    ]
+   },
+   "expected": [
+    ".bound/",
+    "dist/",
+    "node_modules/",
+    ".cache/"
+   ]
+  },
+  {
+   "name": "root:topos-node · ignore@3 · .gitignore",
+   "world": "root:topos-node",
+   "request": {
+    "region": "ignore",
+    "at": 3,
+    "shape": ".gitignore",
+    "name": "topos-node",
+    "reads": [
+     "ignore"
+    ]
+   },
+   "expected": [
+    ".bound/",
+    "dist/",
+    "node_modules/",
+    ".cache/"
+   ]
+  },
+  {
+   "name": "root:topos-github · ignore@3 · .gitignore",
+   "world": "root:topos-github",
+   "request": {
+    "region": "ignore",
+    "at": 3,
+    "shape": ".gitignore",
+    "name": "topos-github",
+    "reads": [
+     "ignore"
+    ]
+   },
+   "expected": [
+    ".bound/",
+    "dist/",
+    "node_modules/",
+    ".cache/"
+   ]
+  },
+  {
+   "name": "root:verify · ignore@3 · .gitignore",
+   "world": "root:verify",
+   "request": {
+    "region": "ignore",
+    "at": 3,
+    "shape": ".gitignore",
+    "name": "verify",
+    "reads": [
+     "ignore"
+    ]
+   },
+   "expected": [
+    ".bound/",
+    "dist/",
+    "node_modules/",
+    ".cache/"
+   ]
+  }
+ ]
+}

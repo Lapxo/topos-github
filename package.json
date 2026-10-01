@@ -1,0 +1,41 @@
+{
+  "name": "@lapxo/topos-github",
+  "version": "0.1.0",
+  "description": "The forge a place asks for, rendered from its lines: the workflows that test, tag and release it, and what its repository never holds.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Lapxo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lapxo/topos-github.git"
+  },
+  "keywords": [
+    "topos",
+    "capsule",
+    "forge",
+    "render"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22.12"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "TARGET.bound"
+  ],
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "dependencies": {
+    "@lapxo/topos": "^0.1.0"
+  }
+}
