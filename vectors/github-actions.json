@@ -860,29 +860,14 @@
      "audit/wire/pipeline/world"
     ],
     "lines": [
-     "bound-lock/1 about=\"what the forge of every world runs, each member a key of its pipeline and the value it holds, the keys the forge reads to release a world as a repo and a blob, and no registry, publish or trusted-publisher key; expanded at every world as the ships list is, and a world that writes its own pipeline key replaces that member for itself alone\" at=witness:world-pipelines-left-at-their-first-copy-when-the-forge-moved by=target form=alphabet measure=id role=reads scope=audit/wire/pipeline/world value=\"branch=main|check=npm ci && npm run build|environment=release|name=node -p \\\"require('./package.json').name\\\"|node=22\\|24|version=node -p \\\"require('./package.json').version\\\"\""
+     "bound-lock/1 about=\"what the forge of every world runs, each member a key of its pipeline and the value it holds, the keys the forge reads to release a world as a repo and a blob, and no registry, publish or trusted-publisher key; expanded at every world as the ships list is, and a world that writes its own pipeline key replaces that member for itself alone\" at=witness:world-pipelines-left-at-their-first-copy-when-the-forge-moved by=target form=alphabet measure=id role=reads scope=audit/wire/pipeline/world value=\"branch=main|runtime=22|version=node -p \\\"require('./package.json').version\\\"\""
     ]
    },
-   "expected": [
-    "name: test",
-    "on:",
-    "  push:",
-    "    branches: []",
-    "  pull_request:",
-    "jobs:",
-    "  test:",
-    "    strategy:",
-    "      matrix:",
-    "        node: []",
-    "    runs-on: ubuntu-latest",
-    "    permissions:",
-    "      contents: read",
-    "    steps:",
-    "      - uses: actions/checkout@v4",
-    "      - uses: actions/setup-node@v4",
-    "        with:",
-    "          node-version: ${{ matrix.node }}"
-   ]
+   "expected": {
+    "protocol": "bound-lock/1",
+    "kind": "refuse",
+    "why": "Error: REFUSE·github-actions: no workflow of the forge is named by .github/workflows/test.yml"
+   }
   },
   {
    "name": "world:topos-measure · github-actions · tag.yml · no pipeline line of its own: the wire's world default, no pack and no publish",
@@ -897,28 +882,14 @@
      "audit/wire/pipeline/world"
     ],
     "lines": [
-     "bound-lock/1 about=\"what the forge of every world runs, each member a key of its pipeline and the value it holds, the keys the forge reads to release a world as a repo and a blob, and no registry, publish or trusted-publisher key; expanded at every world as the ships list is, and a world that writes its own pipeline key replaces that member for itself alone\" at=witness:world-pipelines-left-at-their-first-copy-when-the-forge-moved by=target form=alphabet measure=id role=reads scope=audit/wire/pipeline/world value=\"branch=main|check=npm ci && npm run build|environment=release|name=node -p \\\"require('./package.json').name\\\"|node=22\\|24|version=node -p \\\"require('./package.json').version\\\"\""
+     "bound-lock/1 about=\"what the forge of every world runs, each member a key of its pipeline and the value it holds, the keys the forge reads to release a world as a repo and a blob, and no registry, publish or trusted-publisher key; expanded at every world as the ships list is, and a world that writes its own pipeline key replaces that member for itself alone\" at=witness:world-pipelines-left-at-their-first-copy-when-the-forge-moved by=target form=alphabet measure=id role=reads scope=audit/wire/pipeline/world value=\"branch=main|runtime=22|version=node -p \\\"require('./package.json').version\\\"\""
     ]
    },
-   "expected": [
-    "name: tag",
-    "on:",
-    "  push:",
-    "    branches: []",
-    "jobs:",
-    "  tag:",
-    "    runs-on: ubuntu-latest",
-    "    permissions:",
-    "      contents: write",
-    "    steps:",
-    "      - uses: actions/checkout@v4",
-    "        with:",
-    "          fetch-depth: 0",
-    "      - run: |",
-    "          version=\"v$()\"",
-    "          git tag --list \"$version\" | grep -q . && exit 0",
-    "          git tag \"$version\" && git push origin \"$version\""
-   ]
+   "expected": {
+    "protocol": "bound-lock/1",
+    "kind": "refuse",
+    "why": "Error: REFUSE·github-actions: no workflow of the forge is named by .github/workflows/tag.yml"
+   }
   },
   {
    "name": "world:topos-measure · github-actions · release.yml · no pipeline line of its own: the wire's world default, no pack and no publish",
@@ -933,37 +904,55 @@
      "audit/wire/pipeline/world"
     ],
     "lines": [
-     "bound-lock/1 about=\"what the forge of every world runs, each member a key of its pipeline and the value it holds, the keys the forge reads to release a world as a repo and a blob, and no registry, publish or trusted-publisher key; expanded at every world as the ships list is, and a world that writes its own pipeline key replaces that member for itself alone\" at=witness:world-pipelines-left-at-their-first-copy-when-the-forge-moved by=target form=alphabet measure=id role=reads scope=audit/wire/pipeline/world value=\"branch=main|check=npm ci && npm run build|environment=release|name=node -p \\\"require('./package.json').name\\\"|node=22\\|24|version=node -p \\\"require('./package.json').version\\\"\""
+     "bound-lock/1 about=\"what the forge of every world runs, each member a key of its pipeline and the value it holds, the keys the forge reads to release a world as a repo and a blob, and no registry, publish or trusted-publisher key; expanded at every world as the ships list is, and a world that writes its own pipeline key replaces that member for itself alone\" at=witness:world-pipelines-left-at-their-first-copy-when-the-forge-moved by=target form=alphabet measure=id role=reads scope=audit/wire/pipeline/world value=\"branch=main|runtime=22|version=node -p \\\"require('./package.json').version\\\"\""
     ]
    },
    "expected": [
     "name: release",
     "on:",
-    "  workflow_run:",
-    "    workflows: [tag]",
-    "    types: [completed]",
     "  push:",
-    "    tags: ['v*']",
+    "    branches: [main]",
     "jobs:",
     "  release:",
-    "    if: github.event_name == 'push' || github.event.workflow_run.conclusion == 'success'",
     "    runs-on: ubuntu-latest",
     "    permissions:",
     "      contents: write",
     "    steps:",
     "      - uses: actions/checkout@v4",
     "        with:",
-    "          ref: ${{ github.event.workflow_run.head_sha || github.sha }}",
-    "          fetch-depth: 2",
+    "          fetch-depth: 0",
     "      - uses: actions/setup-node@v4",
     "        with:",
-    "          node-version: ",
+    "          node-version: 22",
     "      - env:",
     "          GH_TOKEN: ${{ github.token }}",
     "        run: |",
-    "          version=\"v$()\"",
-    "          gh release view \"$version\" >/dev/null 2>&1 && exit 0",
-    "          gh release create \"$version\" --title \"$version\" --notes \"$version\""
+    "          version=\"v$(node -p \"require('./package.json').version\")\"",
+    "          git diff HEAD^ HEAD -- package.json | grep -q '\"version\"' || exit 0",
+    "          git tag --list \"$version\" | grep -q . && exit 0",
+    "          git tag \"$version\" && git push origin \"$version\"",
+    "          git checkout \"$version\"",
+    "          npm ci",
+    "          one=\"$(bound fold --as release)\"",
+    "          two=\"$(bound fold --as release)\"",
+    "          test \"$one\" = \"$two\"",
+    "          printf '%s' \"$one\" > release.blob",
+    "          digest=\"sha256:$(sha256sum release.blob | awk '{print $1}')\"",
+    "          export digest",
+    "          asset=\"${digest#sha256:}.tar.gz\"",
+    "          mv release.blob \"$asset\"",
+    "          printf '%s\\n' \"$(bound fold --as release --check)\" | grep -q '^SAME'",
+    "          secrets=\"$(grep -RIlE 'BEGIN (RSA|EC|OPENSSH|PRIVATE)|sk_live_|ghp_|AKIA' --exclude-dir=node_modules --exclude-dir=.git . | wc -l | tr -d ' ')\"",
+    "          stray=0",
+    "          nonjs=\"$(find dist -type f ! -name '*.js' ! -name '*.d.ts' 2>/dev/null | wc -l | tr -d ' ')\"",
+    "          words=\"$(grep -RIlE 'registry\\.npmjs\\.org' --exclude-dir=node_modules --exclude-dir=.git . | wc -l | tr -d ' ')\"",
+    "          test \"$secrets\" = 0 && test \"$stray\" = 0 && test \"$nonjs\" = 0 && test \"$words\" = 0",
+    "          node --input-type=module -e 'import { readFileSync, writeFileSync } from \"node:fs\"; const lines = readFileSync(\"TARGET.bound\",\"utf8\").split(\"\\n\").filter((line) => line.startsWith(\"bound-lock/1 \") && !line.includes(\" value=withdraw\")); const take = (head) => lines.filter((line) => line.includes(` scope=${head}`)); writeFileSync(\"release.json\", JSON.stringify({ digest: process.env.digest, sources: take(\"sources/\"), uses: take(\"uses/\"), needs: take(\"needs/\") }, null, 2) + \"\\n\");'",
+    "          gh release create \"$version\" \"$asset\" release.json --title \"$version\" --notes \"$version\"",
+    "          gh release download \"$version\" --pattern \"$asset\" --dir \"$RUNNER_TEMP/back\" --clobber",
+    "          got=\"$(sha256sum \"$RUNNER_TEMP/back/$asset\" | awk '{print $1}')\"",
+    "          case \"$digest\" in *\"$got\"*) ;; *) gh release delete \"$version\" --yes --cleanup-tag; exit 1 ;; esac",
+    "          { echo '```'; node -e 'const j=JSON.parse(require(\"fs\").readFileSync(\"release.json\",\"utf8\")); for (const k of [\"sources\",\"uses\",\"needs\"]) for (const line of j[k]) console.log(line)'; echo '```'; } >> \"$GITHUB_STEP_SUMMARY\""
    ]
   }
  ]

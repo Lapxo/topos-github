@@ -1,9 +1,1 @@
-cff-version: 1.2.0
-message: "Cite it as @lapxo/topos-github."
-type: software
-title: "@lapxo/topos-github"
-version: "0.1.0"
-authors:
-  - name: "Lapxo"
-repository-code: "https://github.com/lapxo/topos-github"
-license: "MIT"
+

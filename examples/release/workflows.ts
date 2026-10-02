@@ -7,7 +7,7 @@ import { render as forge } from '../../src/regions/github-actions.ts';
 
 const lock = readFileSync(new URL('../../capsule.bound', import.meta.url), 'utf8').split('\n').filter((line) => line.startsWith('bound-lock/1'));
 const reads = declarationOf(lock).regions['github-actions'] ?? [];
-const world = canonical({ at: 'policy:acme/forge', by: 'target', form: 'alphabet', measure: 'id', role: 'reads', scope: 'audit/wire/pipeline/world', value: 'branch=main|check=npm ci && npm run build|node=22\\|24|version=node -p "require(\'./package.json\').version"' });
+const world = canonical({ at: 'policy:acme/forge', by: 'target', form: 'alphabet', measure: 'id', role: 'reads', scope: 'audit/wire/pipeline/world', value: 'branch=main|runtime=22|version=node -p "require(\'./package.json\').version"' });
 const got = answer({ render: shell({ 'github-actions': { reads, region: forge } }) }, { protocol: PROTOCOL, verb: 'render', rootScope: '', files: [], lines: [world], region: 'github-actions', at: 3, shape: '.github/workflows/release.yml', name: 'acme', reads }, '') as { kind: string; lines: string[]; why: string };
 
 console.log(got.kind === 'fact' ? got.lines.join('\n') : got.why);
