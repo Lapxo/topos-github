@@ -1,6 +1,6 @@
 {
   "name": "@lapxo/topos-github",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The forge a place asks for, rendered from its lines: the workflows that test, tag and release it, and what its repository never holds.",
   "type": "module",
   "license": "MIT",
