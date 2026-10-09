@@ -28,24 +28,26 @@ jobs:
         run: |
           version="v$(node -p "require('./package.json').version")"
           mkdir -p release-assets
-          gh release download "$version" --repo Lapxo/topos-github --pattern '0f5b05b2bd1b1f5e3641e6539e61fae87d791c4d51aa5d3d304ffdc064e7fe4d' --dir release-assets || gh release download "${version}-inputs" --repo Lapxo/topos-github --pattern '0f5b05b2bd1b1f5e3641e6539e61fae87d791c4d51aa5d3d304ffdc064e7fe4d' --dir release-assets
+          gh release download "$version" --repo Lapxo/topos-github --pattern '0f5b05b2bd1b1f5e3641e6539e61fae87d791c4d51aa5d3d304ffdc064e7fe4d' --dir release-assets || gh release download v0.1.3-inputs --repo Lapxo/topos-github --pattern '0f5b05b2bd1b1f5e3641e6539e61fae87d791c4d51aa5d3d304ffdc064e7fe4d' --dir release-assets
           printf '%s  %s\n' '0f5b05b2bd1b1f5e3641e6539e61fae87d791c4d51aa5d3d304ffdc064e7fe4d' 'release-assets/0f5b05b2bd1b1f5e3641e6539e61fae87d791c4d51aa5d3d304ffdc064e7fe4d' | sha256sum -c -
-          gh release download "$version" --repo Lapxo/topos-github --pattern '97190fb5e62ffd89940dc08bbbfc7ff865bd4f2096c1805e172297a4a441cb01' --dir release-assets || gh release download "${version}-inputs" --repo Lapxo/topos-github --pattern '97190fb5e62ffd89940dc08bbbfc7ff865bd4f2096c1805e172297a4a441cb01' --dir release-assets
+          gh release download "$version" --repo Lapxo/topos-github --pattern '97190fb5e62ffd89940dc08bbbfc7ff865bd4f2096c1805e172297a4a441cb01' --dir release-assets || gh release download v0.1.3-inputs --repo Lapxo/topos-github --pattern '97190fb5e62ffd89940dc08bbbfc7ff865bd4f2096c1805e172297a4a441cb01' --dir release-assets
           printf '%s  %s\n' '97190fb5e62ffd89940dc08bbbfc7ff865bd4f2096c1805e172297a4a441cb01' 'release-assets/97190fb5e62ffd89940dc08bbbfc7ff865bd4f2096c1805e172297a4a441cb01' | sha256sum -c -
-          gh release download "$version" --repo Lapxo/topos-github --pattern 'archive-profile.mjs' --dir release-assets || gh release download "${version}-inputs" --repo Lapxo/topos-github --pattern 'archive-profile.mjs' --dir release-assets
-          printf '%s  %s\n' 'b29b48db2b4d9633a095765ae65e99ca8c14aae10a76735f006fb728a23e5aaa' 'release-assets/archive-profile.mjs' | sha256sum -c -
+          gh release download "$version" --repo Lapxo/topos-github --pattern 'archive-check.mjs' --dir release-assets || gh release download v0.1.3-inputs --repo Lapxo/topos-github --pattern 'archive-check.mjs' --dir release-assets
+          printf '%s  %s\n' 'c58eb9b6e5c0cdf12ca9311e45339399d2fa8ddd7940e840b129af7b258f8f96' 'release-assets/archive-check.mjs' | sha256sum -c -
           npx --yes --package esbuild@0.28.2 esbuild src/index.ts --bundle --platform=node --format=esm --outfile="$RUNNER_TEMP/runtime-index.js"
           printf '%s  %s\n' 'c99a99e45f88b31979e57281cdf74ee695092724abb65553d95b51f4ed5fb890' "$RUNNER_TEMP/runtime-index.js" | sha256sum -c -
-          node release-assets/archive-profile.mjs 'release-assets/36e1f6822242625e745e5fb1611d8c74c2b769e39b902d1eff56e384bb3ae29e' 'sha256:36e1f6822242625e745e5fb1611d8c74c2b769e39b902d1eff56e384bb3ae29e' capsule.bound 'release-assets/97190fb5e62ffd89940dc08bbbfc7ff865bd4f2096c1805e172297a4a441cb01' dist/index.js "$RUNNER_TEMP/runtime-index.js" >&2
-          gh release download "$version" --repo Lapxo/topos-github --pattern 'ce09169123e270319fcd9cfb46c414d8693d6e28800e1cf58cc4716e531915cb' --dir release-assets || gh release download "${version}-inputs" --repo Lapxo/topos-github --pattern 'ce09169123e270319fcd9cfb46c414d8693d6e28800e1cf58cc4716e531915cb' --dir release-assets
+          gh release download "$version" --repo Lapxo/topos-github --pattern '36e1f6822242625e745e5fb1611d8c74c2b769e39b902d1eff56e384bb3ae29e' --dir release-assets || gh release download v0.1.3-inputs --repo Lapxo/topos-github --pattern '36e1f6822242625e745e5fb1611d8c74c2b769e39b902d1eff56e384bb3ae29e' --dir release-assets
+          printf '%s  %s\n' '36e1f6822242625e745e5fb1611d8c74c2b769e39b902d1eff56e384bb3ae29e' 'release-assets/36e1f6822242625e745e5fb1611d8c74c2b769e39b902d1eff56e384bb3ae29e' | sha256sum -c -
+          node release-assets/archive-check.mjs 'release-assets/36e1f6822242625e745e5fb1611d8c74c2b769e39b902d1eff56e384bb3ae29e' 'sha256:36e1f6822242625e745e5fb1611d8c74c2b769e39b902d1eff56e384bb3ae29e' capsule.bound 'release-assets/97190fb5e62ffd89940dc08bbbfc7ff865bd4f2096c1805e172297a4a441cb01' dist/index.js "$RUNNER_TEMP/runtime-index.js" >&2
+          gh release download "$version" --repo Lapxo/topos-github --pattern 'ce09169123e270319fcd9cfb46c414d8693d6e28800e1cf58cc4716e531915cb' --dir release-assets || gh release download v0.1.3-inputs --repo Lapxo/topos-github --pattern 'ce09169123e270319fcd9cfb46c414d8693d6e28800e1cf58cc4716e531915cb' --dir release-assets
           printf '%s  %s\n' 'ce09169123e270319fcd9cfb46c414d8693d6e28800e1cf58cc4716e531915cb' 'release-assets/ce09169123e270319fcd9cfb46c414d8693d6e28800e1cf58cc4716e531915cb' | sha256sum -c -
-          gh release download "$version" --repo Lapxo/topos-github --pattern '1b6385f068b4d35d6688150e964694353c96c8ed027bac95cc5ef5d90e6035c0' --dir release-assets || gh release download "${version}-inputs" --repo Lapxo/topos-github --pattern '1b6385f068b4d35d6688150e964694353c96c8ed027bac95cc5ef5d90e6035c0' --dir release-assets
+          gh release download "$version" --repo Lapxo/topos-github --pattern '1b6385f068b4d35d6688150e964694353c96c8ed027bac95cc5ef5d90e6035c0' --dir release-assets || gh release download v0.1.3-inputs --repo Lapxo/topos-github --pattern '1b6385f068b4d35d6688150e964694353c96c8ed027bac95cc5ef5d90e6035c0' --dir release-assets
           printf '%s  %s\n' '1b6385f068b4d35d6688150e964694353c96c8ed027bac95cc5ef5d90e6035c0' 'release-assets/1b6385f068b4d35d6688150e964694353c96c8ed027bac95cc5ef5d90e6035c0' | sha256sum -c -
           asset="$(npm pack --silent)"
           test -f "$asset"
           expected="$(sha256sum "$asset")"
           if ! gh release view "$version" >/dev/null 2>&1; then
-            gh release create "$version" "$asset" 'release-assets/0f5b05b2bd1b1f5e3641e6539e61fae87d791c4d51aa5d3d304ffdc064e7fe4d' 'release-assets/36e1f6822242625e745e5fb1611d8c74c2b769e39b902d1eff56e384bb3ae29e' 'release-assets/97190fb5e62ffd89940dc08bbbfc7ff865bd4f2096c1805e172297a4a441cb01' 'release-assets/archive-profile.mjs' 'release-assets/ce09169123e270319fcd9cfb46c414d8693d6e28800e1cf58cc4716e531915cb' 'release-assets/1b6385f068b4d35d6688150e964694353c96c8ed027bac95cc5ef5d90e6035c0' --title "$version" --notes "$version"
+            gh release create "$version" "$asset" 'release-assets/0f5b05b2bd1b1f5e3641e6539e61fae87d791c4d51aa5d3d304ffdc064e7fe4d' 'release-assets/36e1f6822242625e745e5fb1611d8c74c2b769e39b902d1eff56e384bb3ae29e' 'release-assets/97190fb5e62ffd89940dc08bbbfc7ff865bd4f2096c1805e172297a4a441cb01' 'release-assets/archive-check.mjs' 'release-assets/ce09169123e270319fcd9cfb46c414d8693d6e28800e1cf58cc4716e531915cb' 'release-assets/1b6385f068b4d35d6688150e964694353c96c8ed027bac95cc5ef5d90e6035c0' --title "$version" --notes "$version"
           fi
           gh release download "$version" --pattern "$(basename "$asset")" --dir "$RUNNER_TEMP/release-back"
           actual="$(sha256sum "$RUNNER_TEMP/release-back/$(basename "$asset")")"
@@ -71,7 +73,7 @@ jobs:
           gh release download "$version" --pattern "$(basename "$extra")" --dir "$RUNNER_TEMP/release-back"
           extra_actual="$(sha256sum "$RUNNER_TEMP/release-back/$(basename "$extra")")"
           test "${extra_expected%% *}" = "${extra_actual%% *}"
-          extra='release-assets/archive-profile.mjs'
+          extra='release-assets/archive-check.mjs'
           test -f "$extra"
           test "$(basename "$extra")" != "$(basename "$asset")"
           extra_expected="$(sha256sum "$extra")"
