@@ -111,3 +111,13 @@ for (const place of ['library', 'service']) test(`every declared release asset i
 test('release assets with identical filenames refuse before rendering', () => {
   assert.throws(() => render(asked({ ...base, 'release/assets': 'first/standing|second/standing' }), 'release'), /REFUSE.*share a filename/);
 });
+
+for (const place of ['library', 'service']) test(`release preparation precedes packing and stays out of test/tag: ${place}`, () => {
+ const seed=asked({...base,branch:place});
+ const input={...seed,lines:[...seed.lines,{scope:'pipeline/release/prepare',role:'writes',form:'alphabet',measure:'text',value:'lock',about:'verify-inputs\nrebuild-assets'}]};
+ const release=render(input,'release').join('\n');
+ assert.ok(release.indexOf('verify-inputs') < release.indexOf('rebuild-assets'));
+ assert.ok(release.indexOf('rebuild-assets') < release.indexOf('asset="$(pack-place)"'));
+ assert.ok(!render(input,'test').join('\n').includes('verify-inputs'));
+ assert.ok(!render(input,'tag').join('\n').includes('rebuild-assets'));
+});
