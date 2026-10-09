@@ -1,36 +1,159 @@
-bound-lock/1 at=place:topos-github by=target form=alphabet measure=status role=writes scope=publish/bootstrap value=topos-github
-bound-lock/1 at=policy:keys by=owner epoch=9 form=alphabet measure=class role=reads scope=keys/owner sig="sha256:58f1f0983fe65f062bebefd0a6ffc901049c67525ef12dd86ed4dbb7a184b834:z1+6gtFVPc3MfHCK2FUOfqyuPjZDSefYTfkQkcILMfMlRRnmne1mY9BpiO4QqoH0q9gNt2wCLlpQ+sldM+4tCg==" value=authorize
-bound-lock/1 at=policy:keys by=owner epoch=9 form=alphabet measure=coverage role=reads scope=keys/owner sig="sha256:58f1f0983fe65f062bebefd0a6ffc901049c67525ef12dd86ed4dbb7a184b834:gdr4oPiX4pWLNOzhwWcALHKr2zGHo906NoHpymaXTLq1f6Z7icy0gmEn2/smtcjlfAqv/Tr3jbb1nWM23L8QDQ==" value=*
-bound-lock/1 at=policy:keys by=owner epoch=9 form=alphabet measure=public-key role=reads scope=keys/owner sig="sha256:58f1f0983fe65f062bebefd0a6ffc901049c67525ef12dd86ed4dbb7a184b834:vAdWbDyY9geq4MaZj39T9A2o+00zb1Mnr2wLzW7w2ZMrgMJjM0abvmVtsRwTaFwfkkJEGDBb0QuNaKmEE5sIDQ==" value="MCowBQYDK2VwAyEAIYI0be8OWhf3HcVceKpibjgZ+hbYJKYO5ayX8Kk16LE="
-bound-lock/1 at=policy:keys by=owner epoch=9 form=interval measure=resolution role=reads scope=keys/owner sig="sha256:58f1f0983fe65f062bebefd0a6ffc901049c67525ef12dd86ed4dbb7a184b834:m/Pm3pk3THBm5Wah79TmXgxq9qpnwWZ6R4a2UvJdTJnJthquUsLMXgcUBagynG/h/WgakNTL6vB+pbL8WnogAQ==" value=1..16
-bound-lock/1 about="the key this lock admits to write what the tree is read as: a reader speaks only what it observed, and the lock says which key that is" at=policy:keys by=owner epoch=22 form=alphabet measure=class role=reads scope=keys/reader sig="sha256:58f1f0983fe65f062bebefd0a6ffc901049c67525ef12dd86ed4dbb7a184b834:+GFCyG3ntO7YFHrDvyii+/Lu3voIpq4HbByzO/LgLUXfXKV5lvp62DDC0+DXalYDw0Cc15mkkculj1UPeQJSDw==" value=read
-bound-lock/1 at=policy:keys by=owner epoch=22 form=alphabet measure=coverage role=reads scope=keys/reader sig="sha256:58f1f0983fe65f062bebefd0a6ffc901049c67525ef12dd86ed4dbb7a184b834:bd3JgJ3/P/6zqLo19xwgq+ZrAklwuT7mHMI6yuqU8ayfAZid0gSyVV7xWKuAzwsfgtTuKWuUadfNK5FmnqyUAA==" value=*
-bound-lock/1 at=policy:keys by=owner epoch=10 form=alphabet measure=class role=reads scope=keys/verify sig="sha256:58f1f0983fe65f062bebefd0a6ffc901049c67525ef12dd86ed4dbb7a184b834:Q6liul128VZBmQNTlcIx8QK/k8oJsD3JMwaxZ1FinaIkj8ZZA4pcOm1cZbp/yuxgNymJrBR8IQ0ZpahV0ACZCQ==" value=attest
-bound-lock/1 at=policy:keys by=owner epoch=10 form=alphabet measure=coverage role=reads scope=keys/verify sig="sha256:58f1f0983fe65f062bebefd0a6ffc901049c67525ef12dd86ed4dbb7a184b834:jxZ1478dEngHANVcHA15tSE+fBlgUeqQnmRLmg/vK7Mk94njKFBZnh+ccye/dpY01zwc5XmDbi2p6Q8+45uvCQ==" value=verify
-bound-lock/1 at=policy:keys by=owner epoch=10 form=alphabet measure=public-key role=reads scope=keys/verify sig="sha256:58f1f0983fe65f062bebefd0a6ffc901049c67525ef12dd86ed4dbb7a184b834:YXaWrvwPsC/XULzvHV3r/2oS9cFytiEEcdjhJi3+omwNmdVykyVPUnqltKKMv65YbjJ+BCxrVKRmI/MY8fG0DQ==" value="MCowBQYDK2VwAyEACLnnkNAHf4V7vXG4cCZv6rM7suRwGTe0MJoqqCUxnvw="
-bound-lock/1 at=policy:keys by=owner epoch=10 form=interval measure=resolution role=reads scope=keys/verify sig="sha256:58f1f0983fe65f062bebefd0a6ffc901049c67525ef12dd86ed4dbb7a184b834:Do/XC5Jz7KbVhPNGZkUID1c7w8L0CEMzblgBpU3UEBjfkIs/X6I9ScrAeL3lGYXBY8hYUDohw5kWO85bSlQuDQ==" value=1..16
-bound-lock/1 at=policy:hazard/zero by=target form=interval measure=count role=reads scope=hazard/**/src/** value=0..0
-bound-lock/1 at=policy:tree/comments-few by=target form=interval measure=per-file role=reads scope=comments/*/src/** value=0..3
-bound-lock/1 at=policy:place/removal by=target form=interval measure=removed-by-hand role=reads scope=audit/nothing-is-removed-by-hand value=0..0
-bound-lock/1 at=policy:place/orphans by=target form=interval measure=orphan-samples role=reads scope=audit/orphans value=0..0
-bound-lock/1 at=policy:place/dist by=target form=interval measure=shipped-beside-code role=reads scope=audit/dist-holds-js-and-dts value=0..0
-bound-lock/1 at=policy:pages/mode by=target form=interval measure=prose-marks role=reads scope=audit/docs-have-a-mode value=0..0
-bound-lock/1 at=policy:pages/same by=target form=interval measure=rendered-leaves-differ role=reads scope=audit/rendered-docs-match value=0..0
-bound-lock/1 at=policy:security/acts by=target form=interval measure=acts-on-unnamed-hosts role=reads scope=audit/agent-acts-are-effects value=0..0
-bound-lock/1 at=policy:view by=target form=alphabet measure=id role=demands scope=view/manifest shape=package.json value=published-manifest
-bound-lock/1 at=place:topos-github by=target form=alphabet measure=id needs=README.md role=demands scope=view/readme-capsule shape=README.md value=hero|door|idea|figure-world|claims|install|reading|how-they-rest|check|pointers
-bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=reads scope=region/source value=src/**/*.ts
-bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=reads scope=region/vocabulary value=src/**/*.ts
-bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=reads scope=region/said value=src/**/*.ts
-bound-lock/1 at=policy:reader by=target form=alphabet kind=js measure=reader needs=src/ role=reads scope=reader/said/source shape=*.ts value=topos-typescript-tree/src/regions/said.ts
-bound-lock/1 at=policy:view by=target form=alphabet measure=id needs=src/index.ts role=demands scope=view/index shape=src/index.ts value=index
-bound-lock/1 at=policy:view by=target form=alphabet measure=id needs=docs/img/world.svg role=demands scope=view/figure-world shape=docs/img/world.svg value=figure-world@1
-bound-lock/1 at=policy:view by=target form=alphabet measure=id role=demands scope=view/receipts shape=receipts.bound value=receipts@0|receipts@1
-bound-lock/1 at=policy:release by=target form=alphabet measure=id role=demands scope=release/rebirth value=rebirth
-bound-lock/1 at=place:topos-github by=target form=alphabet measure=id role=writes scope=uses/topos-node value=sha256:16a90bc2af57ea8bad6525588a0748c7dc1aaae276bc9680761f9186a10ad8b2
-bound-lock/1 at=place:topos-github by=target form=alphabet measure=id role=writes scope=uses/topos-typescript-tree value=sha256:33ddd7774c8fb05403b95eeb342744b60b9a6e6aabbee3ed9db380656cc6b751
+bound-lock/1 about="**{name}** · {answer}" at=witness:own-project-prose by=target form=alphabet measure=text role=writes scope=prose/en/reading/view value=lock
+bound-lock/1 about="A workflow is a line of the place. A release is the tag that workflow cuts. A repository holds only what its ignore line allows." at=witness:own-project-prose by=target form=alphabet measure=text role=writes scope=prose/en/idea value=lock
+bound-lock/1 about="A world for a repository's workflows and its releases." at=witness:own-project-prose by=target form=alphabet measure=text role=writes scope=prose/en/door/what value=lock
+bound-lock/1 about="Cite it as {name}." at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/cff/name value=lock
+bound-lock/1 about="Clone, `{check}`. A leaf that differs from what its lines render is the contribution: send it with the lines it was handed.\nNothing else is asked. Lines land through the fold, never by hand; a page and the lock disagree, the lock is right." at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/contributing value=lock
+bound-lock/1 about="Each region answers one question." at=witness:own-project-prose by=target form=alphabet measure=text role=writes scope=prose/en/reading/lead value=lock
+bound-lock/1 about="How to read it" at=witness:own-project-prose by=target form=alphabet measure=text role=writes scope=prose/en/reading/heading value=lock
+bound-lock/1 about="It costs {dependencies} dependencies." at=witness:own-project-prose by=target form=alphabet measure=text role=writes scope=prose/en/claims/1-costs value=lock
+bound-lock/1 about="It rests on {names}." at=witness:own-project-prose by=target form=alphabet measure=text role=writes scope=prose/en/rests/on value=lock
+bound-lock/1 about="MIT License\n\nCopyright (c) 2026 Lapxo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE." at=policy:license by=target form=alphabet measure=id role=demands scope=license value=MIT
+bound-lock/1 about="One repository" at=witness:own-project-prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/heading value=lock
+bound-lock/1 about="Restore the illustration only with a formed example and native evidence delivered to its view." at=witness:verified-render-contract by=target form=alphabet measure=id role=demands scope=plan/render/figure-world value=unpaid
+bound-lock/1 about="The historical index view has no provider; source entry points are not generated by a file-fold renderer." at=witness:verified-render-contract by=target form=alphabet measure=id role=demands scope=plan/render/index value=unpaid
+bound-lock/1 about="What it claims" at=witness:own-project-prose by=target form=alphabet measure=text role=writes scope=prose/en/claims/heading value=lock
+bound-lock/1 about="Why a line" at=witness:own-project-prose by=target form=alphabet measure=text role=writes scope=prose/en/idea/heading value=lock
+bound-lock/1 about="Workflows, releases, and what a repository never holds." at=witness:own-project-prose by=target form=alphabet measure=text role=writes scope=prose/en/what value=lock
+bound-lock/1 about="[The whole example]({at})" at=witness:own-project-prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/learn/source value=lock
+bound-lock/1 about="a page to learn from one example: the cell it draws, what it calls and prints, the law it shows, its form, and where it lives; the example is the one the page is named after" at=policy:region by=target form=alphabet measure=text role=writes scope=region/learn value=lock
+bound-lock/1 about="a page to learn from the in-phase example: the cell it draws, what it calls and prints, the law it shows, its form, and where it lives" at=policy:region by=target form=alphabet measure=text role=writes scope=region/learn-in-phase value=lock
+bound-lock/1 about="a page to learn from the price example: the cell it draws, what it calls and prints, the law it shows, its form, and where it lives" at=policy:region by=target form=alphabet measure=text role=writes scope=region/learn-price value=lock
+bound-lock/1 about="a page to learn from the signature example: the cell it draws, what it calls and prints, the law it shows, its form, and where it lives" at=policy:region by=target form=alphabet measure=text role=writes scope=region/learn-signature value=lock
+bound-lock/1 about="a page to learn from the thermometer example: the cell it draws, what it calls and prints, the law it shows, its form, and where it lives" at=policy:region by=target form=alphabet measure=text role=writes scope=region/learn-thermometer value=lock
+bound-lock/1 about="a page to learn from the withdrawal example: the cell it draws, what it calls and prints, the law it shows, its form, and where it lives" at=policy:region by=target form=alphabet measure=text role=writes scope=region/learn-withdrawal value=lock
+bound-lock/1 about="a place adopts it with {scope}" at=witness:own-project-prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/adopted value=lock
+bound-lock/1 about="against topos {digest}" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/topos value=lock
+bound-lock/1 about="declares {domain}, runs on {runtime}, reaches {effects}" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/declares value=lock
+bound-lock/1 about="each key, what it has signed and what it may sign" at=policy:region/signers by=target form=alphabet measure=text role=writes scope=region/signers value=lock
+bound-lock/1 about="each place the owner has said what it is, in the order they rest on each other, with its state as a colour and what the fold counts of it: paid, hazards open, and what the second head says" at=policy:region by=target form=alphabet measure=text role=writes scope=region/places value=lock
+bound-lock/1 about="each signer as a life: what it signed, what it left free and where it forked" at=policy:region/biography by=target form=alphabet measure=text role=writes scope=region/biography value=lock
+bound-lock/1 about="every ceiling a reading is over, and every demand nothing paid" at=policy:region/red by=target form=alphabet measure=text role=writes scope=region/red value=lock
+bound-lock/1 about="every conjecture of a place as the thing it is: who met it, with what, how together their claims arrived, and whether anything has closed it" at=policy:region/census by=target form=alphabet measure=text role=writes scope=region/census value=readings
+bound-lock/1 about="every conjecture of the place, marked as such, with what would falsify it" at=policy:region by=target form=alphabet measure=text role=writes scope=region/open-conjectures value=lock
+bound-lock/1 about="every conjecture with the falsifier its own line names" at=policy:region/conjectures by=target form=alphabet measure=text role=writes scope=region/conjectures value=leaves
+bound-lock/1 about="every operation offered, with how many vectors reached it" at=policy:region/offers by=target form=alphabet measure=text role=writes scope=region/offers value=readings
+bound-lock/1 about="every operation with its signature, its derived refusals, what it reaches and the laws it rests on; every law with its kind, view, premises, sentence and whether it reproduces; every form" at=policy:region by=target form=alphabet measure=text role=writes scope=region/reference value=lock
+bound-lock/1 about="four real calls and what each of them answers" at=policy:region/thirty-seconds by=target form=alphabet measure=text role=writes scope=region/thirty-seconds value=prose
+bound-lock/1 about="how many epochs a region spans, from its first line to its last" at=policy:region/width by=target form=alphabet measure=text role=writes scope=region/width value=lock-and-readings
+bound-lock/1 about="how many of those epochs it was actually spoken in" at=policy:region/rhythm by=target form=alphabet measure=text role=writes scope=region/rhythm value=lock-and-readings
+bound-lock/1 about="how not to believe any of it: the command a clone runs today, and the one that runs the cases with bound once it ships, with how many there are; the repository only once it resolves" at=policy:region by=target form=alphabet measure=text role=writes scope=region/check value=lock
+bound-lock/1 about="how often each region of the tree was read" at=policy:region/region-frequency by=target form=alphabet measure=text role=writes scope=region/region-frequency value=readings
+bound-lock/1 about="how the places rest on each other, drawn from the lock's dependency lines and folded until asked for" at=policy:region by=target form=alphabet measure=text role=writes scope=region/how-they-rest value=lock
+bound-lock/1 about="how together a region arrived, one when every line landed at the same turn of the period" at=policy:region/coherence by=target form=alphabet measure=text role=writes scope=region/coherence value=lock-and-readings
+bound-lock/1 about="its leaf" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/regions/leaf value=lock
+bound-lock/1 about="its regions, read off its own descriptor" at=witness:own-project-prose by=target form=alphabet measure=text role=writes scope=prose/en/door/words value=lock
+bound-lock/1 about="lines that stand on one origin and are therefore not yet information" at=policy:region/grey by=target form=alphabet measure=text role=writes scope=region/grey value=lock
+bound-lock/1 about="packed as {digest}" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/blob value=lock
+bound-lock/1 about="pinned by {place}" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/pinned value=lock
+bound-lock/1 about="publish the version once, by the trusted publisher" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pipeline/publish value=lock
+bound-lock/1 about="publish the version once, by the trusted publisher" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/pipeline/publish value=lock
+bound-lock/1 about="release the version with its tarball, once" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pipeline/release value=lock
+bound-lock/1 about="release the version with its tarball, once" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/pipeline/release value=lock
+bound-lock/1 about="run by the {runtime} host" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/host value=lock
+bound-lock/1 about="tag the version the manifest names, once" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pipeline/tag value=lock
+bound-lock/1 about="tag the version the manifest names, once" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/pipeline/tag value=lock
+bound-lock/1 about="the axioms of a place, the three most rested on spelled out in their own words" at=policy:region/axioms by=target form=alphabet measure=text role=writes scope=region/axioms value=leaves
+bound-lock/1 about="the cases a place holds and which of them did not hold, read from what the runner already answered rather than run again" at=policy:region/vectors by=target form=alphabet measure=text role=writes scope=region/vectors value=readings
+bound-lock/1 about="the cell of an example drawn at a resolution: at zero three bars, above it each claim a bar, what they hold together a bar in the colour of a meeting, and its floor and its ceiling named" at=policy:region by=target form=alphabet measure=text role=writes scope=region/ranges value=lock
+bound-lock/1 about="the cell of the shortest example, drawn, with the legend of its marks as its caption" at=policy:region by=target form=alphabet measure=text role=writes scope=region/figure value=lock
+bound-lock/1 about="the check a clone runs alone: the subpaths the manifest offers, imported, and the second head's signed word, verified against the key the lock admits and the digest of the lock itself" at=policy:region by=target form=alphabet measure=text role=writes scope=region/selfcheck value=lock
+bound-lock/1 about="the check command, which is owed" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/guide/owed value=lock
+bound-lock/1 about="the check the forge runs on every push and every proposal" at=policy:region by=target form=alphabet measure=text role=writes scope=region/pipeline-test value=lock
+bound-lock/1 about="the citation a forge offers with one click, from the lines that already say it: the software by its name, version, author, repository and licence, and the paper it rests on as the citation the forge prefers" at=policy:region by=target form=alphabet measure=text role=writes scope=region/cff value=lock
+bound-lock/1 about="the commands the owner gives, and a grey mark while the verb they call is not published" at=policy:region by=target form=alphabet measure=text role=writes scope=region/commands value=lock
+bound-lock/1 about="the facts of the lock as badges a reader recognizes: version, licence, engine, dependencies, the cases that hold, what the second head says, grey until the instrument that runs it is published, and the paper's identifier" at=policy:region by=target form=alphabet measure=text role=writes scope=region/badges value=lock
+bound-lock/1 about="the figure a region makes: a point, an edge, or a polygon" at=policy:region/shape by=target form=alphabet measure=text role=writes scope=region/shape value=lock-and-readings
+bound-lock/1 about="the first screen of the root: its name, the figure one of its places draws, and one sentence of what the places are together" at=policy:region by=target form=alphabet measure=text role=writes scope=region/door value=lock
+bound-lock/1 about="the first screen: the mark the place is known by, its name, the badges its lock reads to, and the one line of what it is; what is not signed is not on it" at=policy:region by=target form=alphabet measure=text role=writes scope=region/hero value=lock
+bound-lock/1 about="the forge a place asks for, rendered from its lines: the workflows that test, tag and release it, and what its repository never holds" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/what value=lock
+bound-lock/1 about="the guide at resolution zero: five lines, the command that checks the place, how many conjectures are open, and that nothing else is asked" at=policy:region by=target form=alphabet measure=text role=writes scope=region/guide-at-zero value=lock
+bound-lock/1 about="the key this lock admits to write what the tree is read as: a reader speaks only what it observed, and the lock says which key that is" at=policy:keys by=target form=alphabet measure=class role=reads scope=keys/reader value=read
+bound-lock/1 about="the legend of the marks a page is drawn in, in the owner's words" at=policy:region by=target form=alphabet measure=text role=writes scope=region/marks value=lock
+bound-lock/1 about="the licence, carried on a line of the lock and rendered into its own leaf" at=policy:region/license by=target form=alphabet measure=text role=writes scope=region/license value=lock
+bound-lock/1 about="the lines a later line replaced, with when they were replaced" at=policy:region/history by=target form=alphabet measure=text role=writes scope=region/history value=lock
+bound-lock/1 about="the lock a place is published with, seen from inside it: the bootstrap first, the wire and the keys it is read with, the regions it is written in, its own lines and every line a view of it reads, with the place's name gone from every scope, need, policy and cone; nothing of the tree's history and nothing that needs outside the place" at=policy:region by=target form=alphabet measure=text role=writes scope=region/published-lock value=lock
+bound-lock/1 about="the lock lines a place holds in its own files, unsigned, as they are written there" at=policy:region/lock-line by=target form=alphabet measure=text role=writes scope=region/lock-line value=leaves
+bound-lock/1 about="the manifest the package carries, rendered from the same lines without the three fields only this tree's resolver reads: what npm packs and a consumer installs" at=policy:region/published-manifest by=target form=alphabet measure=text role=writes scope=region/published-manifest value=lock
+bound-lock/1 about="the manifest the place holds, rendered from the lines it signs about itself: the fields a consumer reads and the three a resolver older than exports still needs in this tree" at=policy:region/manifest by=target form=alphabet measure=text role=writes scope=region/manifest value=lock
+bound-lock/1 about="the notation of the object at a resolution: at zero the tuple a cell is; at one the tuple and the formulas of what it rests on, in the order they rest; at three each formula beside its law's sentence; at eight all of it with the signature of every arrow and the states" at=policy:region by=target form=alphabet measure=text role=writes scope=region/notation value=lock
+bound-lock/1 about="the obligatory as its definition says it, with the four states and the parts it is made of" at=policy:region by=target form=alphabet measure=text role=writes scope=region/the-object value=lock
+bound-lock/1 about="the one line that installs it: the verb the lock names, then the name its manifest carries" at=policy:region by=target form=alphabet measure=text role=writes scope=region/install value=lock
+bound-lock/1 about="the one line that says what this place is: claims, demands paid, ceilings met, what the second head said, and what a fold of it costs" at=policy:region/programs by=target form=alphabet measure=text role=writes scope=region/programs value=lock
+bound-lock/1 about="the open questions of a place, as the lock asks them" at=policy:region/question by=target form=alphabet measure=text role=writes scope=region/question value=lock
+bound-lock/1 about="the options a place builds with, each from its own line" at=policy:region by=target form=alphabet measure=text role=writes scope=region/build value=lock
+bound-lock/1 about="the pages below the door, as links from the views that write them: the reference and the pages to learn from; the forge shows the guide and the licence itself" at=policy:region by=target form=alphabet measure=text role=writes scope=region/pointers value=lock
+bound-lock/1 about="the paper: the owner's words on what it proves, then the reference a reader copies, its authors, year, title, version, publisher and address" at=policy:region by=target form=alphabet measure=text role=writes scope=region/the-paper value=lock
+bound-lock/1 about="the prose a place keeps beside its source, read as paragraphs and never as headings" at=policy:region/why by=target form=alphabet measure=text role=writes scope=region/why value=leaves
+bound-lock/1 about="the question that costs least to close next" at=policy:region/cheapest-closer by=target form=alphabet measure=text role=writes scope=region/cheapest-closer value=lock
+bound-lock/1 about="the questions with no answer yet, widest first" at=policy:region/open-questions by=target form=alphabet measure=text role=writes scope=region/open-questions value=lock
+bound-lock/1 about="the receipts a place is published with: what it observed, seen from inside it, without the word the tree's second head gave, since the published place asks its own" at=policy:region by=target form=alphabet measure=text role=writes scope=region/published-receipts value=lock
+bound-lock/1 about="the regions spoken in at more than two epochs" at=policy:region/resonance by=target form=alphabet measure=text role=writes scope=region/resonance value=lock
+bound-lock/1 about="the regions spoken in less this epoch than last" at=policy:region/receding by=target form=alphabet measure=text role=writes scope=region/receding value=lock
+bound-lock/1 about="the regions spoken in more this epoch than last" at=policy:region/approaching by=target form=alphabet measure=text role=writes scope=region/approaching value=lock
+bound-lock/1 about="the release the forge makes after the tag: the version published once by the trusted publisher, and its tarball attached" at=policy:region by=target form=alphabet measure=text role=writes scope=region/pipeline-release value=lock
+bound-lock/1 about="the scale the shortest example draws: each claim as a bar and what they hold together beneath them" at=policy:region by=target form=alphabet measure=text role=writes scope=region/picture value=lock
+bound-lock/1 about="the shortest example this package ships and what it prints, with the digest the lock pins for it" at=policy:region by=target form=alphabet measure=text role=writes scope=region/first-use value=lock
+bound-lock/1 about="the tag the forge makes for the version the manifest names, once" at=policy:region by=target form=alphabet measure=text role=writes scope=region/pipeline-tag value=lock
+bound-lock/1 about="the theory of a place as its lists, each law with what met it and what would break it" at=policy:region/laws by=target form=alphabet measure=text role=writes scope=region/laws value=readings
+bound-lock/1 about="the three axioms the rest leans on hardest by their sentence, the others by name, and one theorem meeting its measurement" at=policy:region by=target form=alphabet measure=text role=writes scope=region/what-holds value=lock
+bound-lock/1 about="the whole idea in one picture, before any name is introduced" at=policy:region/idea by=target form=alphabet measure=text role=writes scope=region/idea value=prose
+bound-lock/1 about="two readings of one cell that do not meet, with both sides named" at=policy:region/forks by=target form=alphabet measure=text role=writes scope=region/forks value=lock
+bound-lock/1 about="what a demand costs to pay and what paying it lands" at=policy:region/take by=target form=alphabet measure=text role=writes scope=region/take value=lock
+bound-lock/1 about="what a line is worth beyond what it says, in bits still free" at=policy:region/premium by=target form=alphabet measure=text role=writes scope=region/premium value=lock
+bound-lock/1 about="what a package carries of its own reading, so a clone folds without running anything" at=policy:region/receipts by=target form=alphabet measure=text role=writes scope=region/receipts value=readings
+bound-lock/1 about="what a place holds that nothing reaches: a test or a sample no demand names and no run reads, and a page no view writes and no demand needs" at=policy:region by=target form=alphabet measure=text role=writes scope=region/orphans value=lock
+bound-lock/1 about="what a repository of the place never holds, one line each" at=policy:region by=target form=alphabet measure=text role=writes scope=region/ignore value=lock
+bound-lock/1 about="what a tree has not answered, one card per cell: its cone by digest, its ceiling, its origins and each state it could take with what that state would be worth" at=policy:region/cells by=target form=alphabet measure=text role=writes scope=region/cells value=lock
+bound-lock/1 about="what each leaf of the place is, written or rendered, so a page says which of its own files were never typed" at=policy:region/role by=target form=alphabet measure=text role=writes scope=region/role value=leaves
+bound-lock/1 about="what is open in each place, folded until asked for: conjectures, hazards by kind, and demands not yet paid" at=policy:region by=target form=alphabet measure=text role=writes scope=region/what-is-open value=lock
+bound-lock/1 about="what is still undecided, in bits, by region and by the epoch it was born in" at=policy:region/freedom by=target form=alphabet measure=text role=writes scope=region/freedom value=lock
+bound-lock/1 about="what it takes to sign here, and who may" at=policy:region/sign by=target form=alphabet measure=text role=writes scope=region/sign value=lock
+bound-lock/1 about="what lies where in the source, counted from the tree itself" at=policy:region/folders by=target form=alphabet measure=text role=writes scope=region/folders value=leaves
+bound-lock/1 about="what rests on each line, so what would move if it moved is known before it moves" at=policy:region/dependents by=target form=alphabet measure=text role=writes scope=region/dependents value=lock
+bound-lock/1 about="what runs here and what is read, said apart" at=policy:region/environments by=target form=alphabet measure=text role=writes scope=region/environments value=prose
+bound-lock/1 about="what the object rests on, drawn: the definition most offers rest on and the lines it rests on, each by its name" at=policy:region by=target form=alphabet measure=text role=writes scope=region/rests value=lock
+bound-lock/1 about="what the package attacks for an engineer, a mathematician and a physicist, in the owner's words" at=policy:region by=target form=alphabet measure=text role=writes scope=region/audiences value=lock
+bound-lock/1 about="what the theory proves and which views implement it" at=policy:region/paper by=target form=alphabet measure=text role=writes scope=region/paper value=prose
+bound-lock/1 about="what this place takes from another, by name" at=policy:region/consumes by=target form=alphabet measure=text role=writes scope=region/consumes value=readings
+bound-lock/1 about="what this work cites and by what identifier" at=policy:region/cite by=target form=alphabet measure=text role=writes scope=region/cite value=readings
+bound-lock/1 about="where looking is worth most, in bits per place" at=policy:region/gaze by=target form=alphabet measure=text role=writes scope=region/gaze value=lock
+bound-lock/1 about="where the package goes next, in the owner's words, in four lines at most" at=policy:region by=target form=alphabet measure=text role=writes scope=region/where-next value=lock
+bound-lock/1 about="where this place stands in the tree it belongs to" at=policy:region/scene by=target form=alphabet measure=text role=writes scope=region/scene value=lock
+bound-lock/1 about="whether a region holds without any one of its origins" at=policy:region/robustness by=target form=alphabet measure=text role=writes scope=region/robustness value=lock-and-readings
+bound-lock/1 about="which view answers which question, in the words each view says of itself" at=policy:region by=target form=alphabet measure=text role=writes scope=region/reading value=lock
+bound-lock/1 about="who spoke in each region of the tree, head and reader alike" at=policy:region/origins by=target form=alphabet measure=text role=writes scope=region/origins value=lock-and-readings
+bound-lock/1 about="{count} hold" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/badge/held value=lock
+bound-lock/1 about="{count} meet at {lo}..{hi}: {state}" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/cell/together value=lock
+bound-lock/1 about="{count} meet at {lo}..{hi}; {who} is apart: {state}" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/cell/outlier value=lock
+bound-lock/1 about="{count} regions, each read off the lines its descriptor declares and nothing else; it reaches {effects} beyond them." at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/regions/lead value=lock
+bound-lock/1 about="{count} regions, the longest of them {longest} lines" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/regions value=lock
+bound-lock/1 about="{count} vector files, each held from the blob" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/vectors value=lock
+bound-lock/1 about="{glyph} `{check}`" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/check/command value=lock
+bound-lock/1 about="{glyph} {count} cases hold" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/check/held value=lock
+bound-lock/1 about="{name} reads {reads}" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/region value=lock
+bound-lock/1 about="{name}@{version} is published" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pipeline/published value=lock
+bound-lock/1 about="{name}@{version} is published" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/pipeline/published value=lock
+bound-lock/1 about="{version} is released" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pipeline/released value=lock
+bound-lock/1 about="{version} is released" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/pipeline/released value=lock
+bound-lock/1 about="{version} is tagged" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pipeline/tagged value=lock
+bound-lock/1 about="{version} is tagged" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/pipeline/tagged value=lock
+bound-lock/1 about="{version}, as its lock holds it" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pipeline/notes value=lock
+bound-lock/1 about="{version}, as its lock holds it" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/pipeline/notes value=lock
+bound-lock/1 about="| region | reads | writes |" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/regions/table value=lock
+bound-lock/1 about=Check at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/check/heading value=lock
+bound-lock/1 about=Contributing at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/guide/heading value=lock
+bound-lock/1 about=Pointers at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pointers/heading value=lock
+bound-lock/1 about=Reference at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/regions/heading value=lock
+bound-lock/1 about=cases at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/badge/cases value=lock
+bound-lock/1 about=dependencies at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/badge/dependencies value=lock
+bound-lock/1 about=license at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/badge/license value=lock
+bound-lock/1 about=node at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/badge/engines value=lock
+bound-lock/1 about=receipt at=witness:own-project-prose by=target form=alphabet measure=text role=writes scope=prose/en/claims/receipt value=lock
+bound-lock/1 about=verify at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/badge/verify value=lock
+bound-lock/1 about=version at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/badge/version value=lock
 bound-lock/1 at=place:topos-github by=target form=alphabet measure=id role=writes scope=sources/topos-github value=github:Lapxo/topos-github
-bound-lock/1 at=policy:version by=target form=alphabet measure=id needs=package.json role=writes scope=version shape=package.json value=0.1.2
+bound-lock/1 at=place:topos-github by=target form=alphabet measure=status role=writes scope=publish/bootstrap value=topos-github
+bound-lock/1 at=place:topos-measure/release by=target form=alphabet measure=id role=demands scope=view/pipeline-release shape=.github/workflows/release.yml value=github-actions
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/acts value="observe:role=writes|withdraw:value=withdraw|sign:reads,interval,hi|require:reads,interval,lo|join:widening,at=witness|refine:@res"
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/at-classes value=origin|place|receipt|witness|policy
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/badges/world value=version|license|engines|dependencies|cases|verify|doi
@@ -52,27 +175,53 @@ bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/offers/world value="artifacts=src/**/*.js\\|src/**/*.ts|capsules=./|concepts=src/**/*.ts|hazards=**|laws=**/*.bound|packages=package.json\\|tsconfig.json|said=src/**/*.ts|source=src/**/*.ts|vocabulary=src/**/*.ts"
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/pipeline/world value="branch=main|runtime=22|version=node -p \"require('./package.json').version\""
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/questions value=source/answers|source/arrow|source/calls|source/carries|source/declared|source/lang|source/literal|source/returns|source/signature|source/union
-bound-lock/1 at=policy:audit by=target form=alphabet measure=resolution role=reads scope=audit/wire/receipts value=0|1|8
-bound-lock/1 at=policy:wire/region-measures by=target form=alphabet measure=id role=reads scope=audit/wire/region-measures value=coordinates|leaves
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/required value=scope|role|form|measure|value|by|at
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/roles value=reads|writes|demands|source|render|receipt
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/rows value=claim|held
-bound-lock/1 at=policy:wire/shapes by=target form=alphabet measure=id role=reads scope=audit/wire/shapes value=decision|lock|package|reader|render|run|vector|view
-bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/ships value=dist|README.md|LICENSE|TARGET.bound
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/signature-algorithms value=ed25519|sha256:58f1f0983fe65f062bebefd0a6ffc901049c67525ef12dd86ed4dbb7a184b834|ed25519:era1
-bound-lock/1 at=policy:wire/states by=target form=alphabet measure=id role=reads scope=audit/wire/states value=absent|present|unread|withdraw
-bound-lock/1 at=policy:wire/templates by=target form=alphabet measure=id role=reads scope=audit/wire/templates value={cone}|{roots}
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/verdicts value=agrees|forks|stale|grey|none
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/views value=field|spectrum|ideal|chain|complement|dual|product|quotient|valuation|galois
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/views/world value=citation-file|gitignore|guide|manifest|pipeline-release|readme-capsule|reference-capsule|tsconfig
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/worlds/documents value=readme|markdown|svg|mermaid|cff|doi|badge
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/worlds/forge value=github|workflow
 bound-lock/1 at=policy:audit by=target form=alphabet measure=id role=reads scope=audit/wire/worlds/packages value=npm|tsconfig
+bound-lock/1 at=policy:audit by=target form=alphabet measure=resolution role=reads scope=audit/wire/receipts value=0|1|8
+bound-lock/1 at=policy:author by=target form=alphabet measure=id needs=package.json role=writes scope=author shape=package.json value=Lapxo
+bound-lock/1 at=policy:bound/011-port-release by=target form=alphabet measure=signer role=writes scope=keys/owner value=file
+bound-lock/1 at=policy:bound/011-port-release by=target form=interval measure=bytes role=writes scope=signer/response-bytes value=1048576..1048576
+bound-lock/1 at=policy:bound/011-port-release by=target form=interval measure=milliseconds role=writes scope=signer/timeout value=30000..30000
+bound-lock/1 at=policy:bound/leaf-roles by=target form=alphabet measure=role role=reads scope=leaf-role/receipts.bound value=derived
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/allowImportingTsExtensions shape=tsconfig.json value=true
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/declaration shape=tsconfig.json value=true
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/esModuleInterop shape=tsconfig.json value=true
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/forceConsistentCasingInFileNames shape=tsconfig.json value=true
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/include shape=tsconfig.json value=src
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/incremental shape=tsconfig.json value=true
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/module shape=tsconfig.json value=NodeNext
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/moduleResolution shape=tsconfig.json value=NodeNext
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/noFallthroughCasesInSwitch shape=tsconfig.json value=true
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/noImplicitOverride shape=tsconfig.json value=true
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/noImplicitReturns shape=tsconfig.json value=true
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/outDir shape=tsconfig.json value=dist
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/rewriteRelativeImportExtensions shape=tsconfig.json value=true
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/rootDir shape=tsconfig.json value=src
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/skipLibCheck shape=tsconfig.json value=true
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/strict shape=tsconfig.json value=true
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/target shape=tsconfig.json value=ES2020
+bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/tsBuildInfoFile shape=tsconfig.json value=.cache/tsbuildinfo
+bound-lock/1 at=policy:capsule/at-most-four-hundred by=target form=interval measure=count role=reads scope=lines/src/**/* value=0..400
+bound-lock/1 at=policy:capsule/customisation-is-the-places-lines by=target form=interval measure=count role=reads scope=source/customised/src/** value=0..0
+bound-lock/1 at=policy:capsule/language-facts-come-from-the-language-capsule by=target form=interval measure=count role=reads scope=source/lexed/src/** value=0..0
+bound-lock/1 at=policy:capsule/one-world by=target form=alphabet measure=id role=reads scope=literal/src/** value=not:readme|markdown|npm|tsconfig|cff|doi|badge
+bound-lock/1 at=policy:capsule/reads-lines-and-receipts-only by=target form=interval measure=count role=reads scope=source/unread/src/** value=0..0
+bound-lock/1 at=policy:check by=target form=alphabet measure=id needs=package.json role=writes scope=check value="npm ci && npm run build"
 bound-lock/1 at=policy:cites by=target form=alphabet measure=author role=writes scope=cites/two-sided-constraints value="Ochoa, N."
 bound-lock/1 at=policy:cites by=target form=alphabet measure=doi role=writes scope=cites/two-sided-constraints value=10.5281/zenodo.21858428
 bound-lock/1 at=policy:cites by=target form=alphabet measure=publisher role=writes scope=cites/two-sided-constraints value=Zenodo
 bound-lock/1 at=policy:cites by=target form=alphabet measure=version role=writes scope=cites/two-sided-constraints value=1.0.0
 bound-lock/1 at=policy:cites by=target form=alphabet measure=year role=writes scope=cites/two-sided-constraints value=2026
+bound-lock/1 at=policy:engines by=target form=alphabet measure=id needs=package.json role=writes scope=engines shape=package.json value=">=22.12"
+bound-lock/1 at=policy:exports by=target form=alphabet measure=id needs=package.json role=writes scope=exports shape=package.json value=dist/index
 bound-lock/1 at=policy:form by=target form=alphabet measure=id role=writes scope=form/figure/fold value=REQUIRED|FREE|CONFLICT
 bound-lock/1 at=policy:form by=target form=alphabet measure=id role=writes scope=form/figure/line value=scope|role|measure|form|value|at
 bound-lock/1 at=policy:form by=target form=alphabet measure=id role=writes scope=form/formula value=text|latex|mathml
@@ -83,32 +232,6 @@ bound-lock/1 at=policy:form by=target form=alphabet measure=id role=writes scope
 bound-lock/1 at=policy:form by=target form=alphabet measure=id role=writes scope=form/prose/en/heading value=capital
 bound-lock/1 at=policy:form by=target form=alphabet measure=id role=writes scope=form/prose/en/list value=", | and "
 bound-lock/1 at=policy:form by=target form=alphabet measure=id role=writes scope=form/prose/en/numbers value=no|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve
-bound-lock/1 about=cases at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/badge/cases value=lock
-bound-lock/1 about=dependencies at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/badge/dependencies value=lock
-bound-lock/1 about=node at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/badge/engines value=lock
-bound-lock/1 about="{count} hold" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/badge/held value=lock
-bound-lock/1 about=license at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/badge/license value=lock
-bound-lock/1 about=verify at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/badge/verify value=lock
-bound-lock/1 about=version at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/badge/version value=lock
-bound-lock/1 about="Cite it as {name}." at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/cff/name value=lock
-bound-lock/1 about="{glyph} `{check}`" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/check/command value=lock
-bound-lock/1 about=Check at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/check/heading value=lock
-bound-lock/1 about="{glyph} {count} cases hold" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/check/held value=lock
-bound-lock/1 about="Clone, `{check}`. A leaf that differs from what its lines render is the contribution: send it with the lines it was handed.\nNothing else is asked. Lines land through the fold, never by hand; a page and the lock disagree, the lock is right." at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/contributing value=lock
-bound-lock/1 about=Contributing at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/guide/heading value=lock
-bound-lock/1 about="the check command, which is owed" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/guide/owed value=lock
-bound-lock/1 about="{version}, as its lock holds it" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pipeline/notes value=lock
-bound-lock/1 about="publish the version once, by the trusted publisher" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pipeline/publish value=lock
-bound-lock/1 about="{name}@{version} is published" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pipeline/published value=lock
-bound-lock/1 about="release the version with its tarball, once" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pipeline/release value=lock
-bound-lock/1 about="{version} is released" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pipeline/released value=lock
-bound-lock/1 about="tag the version the manifest names, once" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pipeline/tag value=lock
-bound-lock/1 about="{version} is tagged" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pipeline/tagged value=lock
-bound-lock/1 about=Pointers at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/pointers/heading value=lock
-bound-lock/1 about=Reference at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/regions/heading value=lock
-bound-lock/1 about="{count} regions, each read off the lines its descriptor declares and nothing else; it reaches {effects} beyond them." at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/regions/lead value=lock
-bound-lock/1 about="its leaf" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/regions/leaf value=lock
-bound-lock/1 about="| region | reads | writes |" at=policy:form by=target form=alphabet measure=text role=writes scope=form/prose/en/page/regions/table value=lock
 bound-lock/1 at=policy:form by=target form=alphabet measure=id role=writes scope=form/prose/en/sentence value=capital|period
 bound-lock/1 at=policy:form by=target form=alphabet measure=id role=writes scope=form/prose/en/separator value=" · "
 bound-lock/1 at=policy:form by=target form=alphabet measure=id role=writes scope=form/prose/en/state/CONFLICT value="its origins are apart"
@@ -264,170 +387,45 @@ bound-lock/1 at=policy:form by=target form=alphabet measure=id role=writes scope
 bound-lock/1 at=policy:form by=target form=alphabet measure=id role=writes scope=form/template/what-holds/other value=name|about
 bound-lock/1 at=policy:form by=target form=alphabet measure=id role=writes scope=form/template/what-holds/others value=count
 bound-lock/1 at=policy:form by=target form=alphabet measure=id role=writes scope=form/template/wire/blob value=hash
-bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=form/template/wire/canonical value=hash
-bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=form/template/wire/encoding value=encoding
-bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=form/template/wire/header value=header
-bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=form/template/wire/lead value=header|encoding
-bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=form/template/wire/order value=encoding
+bound-lock/1 at=policy:hazard/zero by=target form=interval measure=count role=reads scope=hazard/**/src/** value=0..0
+bound-lock/1 at=policy:ignore by=target form=alphabet measure=id role=writes scope=ignore value=.bound/|dist/|node_modules/|.cache/
+bound-lock/1 at=policy:install by=target form=alphabet measure=id needs=package.json role=writes scope=install value="npm install"
+bound-lock/1 at=policy:keys by=owner epoch=1 form=alphabet measure=public-key role=reads scope=keys/owner sig="ed25519:era1:f9v/MckzhV22QrzF/liHT/vPfN+mrn9PFChpcQQBRYw2y5tMlv+JcNo8XYthh8Seaia3N+CcbRW3mJaxafqSCw==" value="MCowBQYDK2VwAyEAIYI0be8OWhf3HcVceKpibjgZ+hbYJKYO5ayX8Kk16LE="
+bound-lock/1 at=policy:keys by=owner epoch=1 form=alphabet measure=public-key role=reads scope=keys/verify sig="ed25519:era1:vH9Edf77HqyUvWK9O/1s6E02C+AkMqUV9slcjUztxQ2P1N5knpLis+g9sVDuZ/zUwFdUsqtS0luRgis7rdXvCg==" value="MCowBQYDK2VwAyEACLnnkNAHf4V7vXG4cCZv6rM7suRwGTe0MJoqqCUxnvw="
+bound-lock/1 at=policy:keys by=target form=alphabet measure=class role=reads scope=keys/owner value=authorize
+bound-lock/1 at=policy:keys by=target form=alphabet measure=class role=reads scope=keys/verify value=attest
+bound-lock/1 at=policy:keys by=target form=alphabet measure=coverage role=reads scope=keys/owner value=*
+bound-lock/1 at=policy:keys by=target form=alphabet measure=coverage role=reads scope=keys/reader value=*
+bound-lock/1 at=policy:keys by=target form=alphabet measure=coverage role=reads scope=keys/verify value=verify
+bound-lock/1 at=policy:keys by=target form=interval measure=resolution role=reads scope=keys/owner value=1..16
+bound-lock/1 at=policy:keys by=target form=interval measure=resolution role=reads scope=keys/verify value=1..16
+bound-lock/1 at=policy:keywords by=target form=alphabet measure=id needs=package.json role=writes scope=keywords shape=package.json value=topos|capsule|forge|render
+bound-lock/1 at=policy:lang by=target form=alphabet measure=id role=writes scope=lang value=en
 bound-lock/1 at=policy:leaf-role by=target form=alphabet measure=role role=reads scope=leaf-role/.cache value=derived
 bound-lock/1 at=policy:leaf-role by=target form=alphabet measure=role role=reads scope=leaf-role/.github value=derived
 bound-lock/1 at=policy:leaf-role by=target form=alphabet measure=role role=reads scope=leaf-role/.gitignore value=derived
 bound-lock/1 at=policy:leaf-role by=target form=alphabet measure=role role=reads scope=leaf-role/CITATION.cff value=derived
 bound-lock/1 at=policy:leaf-role by=target form=alphabet measure=role role=reads scope=leaf-role/CONTRIBUTING.md value=derived
 bound-lock/1 at=policy:leaf-role by=target form=alphabet measure=role role=reads scope=leaf-role/package-lock.json value=derived
-bound-lock/1 at=policy:bound/leaf-roles by=target form=alphabet measure=role role=reads scope=leaf-role/receipts.bound value=derived
 bound-lock/1 at=policy:leaf-role by=target form=alphabet measure=role role=reads scope=leaf-role/reference.md value=derived
-bound-lock/1 about="MIT License\n\nCopyright (c) 2026 Lapxo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE." at=policy:license by=target form=alphabet measure=id role=demands scope=license value=MIT
-bound-lock/1 at=policy:capsule/at-most-four-hundred by=target form=interval measure=count role=reads scope=lines/src/**/* value=0..400
-bound-lock/1 at=policy:capsule/one-world by=target form=alphabet measure=id role=reads scope=literal/src/** value=not:readme|markdown|npm|tsconfig|cff|doi|badge
-bound-lock/1 at=policy:open by=target form=alphabet measure=id role=writes scope=open/who value="for a ledger=H1-uncertainty|for a ledger=H2-density-attracts|for a mathematician=H4-enriched-semilattice|for a mathematician=H9-the-obligatory-is-maximal|readings=H3-a-distant-signature-moves-a-cell-that-did-not-move|readings=H5-hilbert-is-the-obligatory-without-four-fields|readings=H6-structure-of-measurement|readings=H7-the-medium-of-encounters|readings=H8-refereed-game"
-bound-lock/1 about="{count} meet at {lo}..{hi}; {who} is apart: {state}" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/cell/outlier value=lock
-bound-lock/1 about="{count} meet at {lo}..{hi}: {state}" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/cell/together value=lock
-bound-lock/1 about="packed as {digest}" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/blob value=lock
-bound-lock/1 about="declares {domain}, runs on {runtime}, reaches {effects}" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/declares value=lock
-bound-lock/1 about="run by the {runtime} host" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/host value=lock
-bound-lock/1 about="pinned by {place}" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/pinned value=lock
-bound-lock/1 about="{name} reads {reads}" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/region value=lock
-bound-lock/1 about="{count} regions, the longest of them {longest} lines" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/regions value=lock
-bound-lock/1 about="against topos {digest}" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/topos value=lock
-bound-lock/1 about="{count} vector files, each held from the blob" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/figure/world/vectors value=lock
-bound-lock/1 about="{version}, as its lock holds it" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/pipeline/notes value=lock
-bound-lock/1 about="publish the version once, by the trusted publisher" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/pipeline/publish value=lock
-bound-lock/1 about="{name}@{version} is published" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/pipeline/published value=lock
-bound-lock/1 about="release the version with its tarball, once" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/pipeline/release value=lock
-bound-lock/1 about="{version} is released" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/pipeline/released value=lock
-bound-lock/1 about="tag the version the manifest names, once" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/pipeline/tag value=lock
-bound-lock/1 about="{version} is tagged" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/pipeline/tagged value=lock
-bound-lock/1 about="the forge a place asks for, rendered from its lines: the workflows that test, tag and release it, and what its repository never holds" at=policy:prose by=target form=alphabet measure=text role=writes scope=prose/en/what value=lock
-bound-lock/1 about="the regions spoken in more this epoch than last" at=policy:region/approaching by=target form=alphabet measure=text role=writes scope=region/approaching value=lock
-bound-lock/1 about="what the package attacks for an engineer, a mathematician and a physicist, in the owner's words" at=policy:region by=target form=alphabet measure=text role=writes scope=region/audiences value=lock
-bound-lock/1 about="the axioms of a place, the three most rested on spelled out in their own words" at=policy:region/axioms by=target form=alphabet measure=text role=writes scope=region/axioms value=leaves
-bound-lock/1 about="the facts of the lock as badges a reader recognizes: version, licence, engine, dependencies, the cases that hold, what the second head says, grey until the instrument that runs it is published, and the paper's identifier" at=policy:region by=target form=alphabet measure=text role=writes scope=region/badges value=lock
-bound-lock/1 about="each signer as a life: what it signed, what it left free and where it forked" at=policy:region/biography by=target form=alphabet measure=text role=writes scope=region/biography value=lock
-bound-lock/1 about="the options a place builds with, each from its own line" at=policy:region by=target form=alphabet measure=text role=writes scope=region/build value=lock
-bound-lock/1 about="what a tree has not answered, one card per cell: its cone by digest, its ceiling, its origins and each state it could take with what that state would be worth" at=policy:region/cells by=target form=alphabet measure=text role=writes scope=region/cells value=lock
-bound-lock/1 about="every conjecture of a place as the thing it is: who met it, with what, how together their claims arrived, and whether anything has closed it" at=policy:region/census by=target form=alphabet measure=text role=writes scope=region/census value=readings
-bound-lock/1 about="the citation a forge offers with one click, from the lines that already say it: the software by its name, version, author, repository and licence, and the paper it rests on as the citation the forge prefers" at=policy:region by=target form=alphabet measure=text role=writes scope=region/cff value=lock
-bound-lock/1 about="the question that costs least to close next" at=policy:region/cheapest-closer by=target form=alphabet measure=text role=writes scope=region/cheapest-closer value=lock
-bound-lock/1 about="how not to believe any of it: the command a clone runs today, and the one that runs the cases with bound once it ships, with how many there are; the repository only once it resolves" at=policy:region by=target form=alphabet measure=text role=writes scope=region/check value=lock
-bound-lock/1 about="what this work cites and by what identifier" at=policy:region/cite by=target form=alphabet measure=text role=writes scope=region/cite value=readings
-bound-lock/1 about="how together a region arrived, one when every line landed at the same turn of the period" at=policy:region/coherence by=target form=alphabet measure=text role=writes scope=region/coherence value=lock-and-readings
-bound-lock/1 about="the commands the owner gives, and a grey mark while the verb they call is not published" at=policy:region by=target form=alphabet measure=text role=writes scope=region/commands value=lock
-bound-lock/1 about="every conjecture with the falsifier its own line names" at=policy:region/conjectures by=target form=alphabet measure=text role=writes scope=region/conjectures value=leaves
-bound-lock/1 about="what this place takes from another, by name" at=policy:region/consumes by=target form=alphabet measure=text role=writes scope=region/consumes value=readings
-bound-lock/1 about="what rests on each line, so what would move if it moved is known before it moves" at=policy:region/dependents by=target form=alphabet measure=text role=writes scope=region/dependents value=lock
-bound-lock/1 about="the first screen of the root: its name, the figure one of its places draws, and one sentence of what the places are together" at=policy:region by=target form=alphabet measure=text role=writes scope=region/door value=lock
-bound-lock/1 about="what runs here and what is read, said apart" at=policy:region/environments by=target form=alphabet measure=text role=writes scope=region/environments value=prose
-bound-lock/1 about="the cell of the shortest example, drawn, with the legend of its marks as its caption" at=policy:region by=target form=alphabet measure=text role=writes scope=region/figure value=lock
-bound-lock/1 about="the shortest example this package ships and what it prints, with the digest the lock pins for it" at=policy:region by=target form=alphabet measure=text role=writes scope=region/first-use value=lock
-bound-lock/1 about="what lies where in the source, counted from the tree itself" at=policy:region/folders by=target form=alphabet measure=text role=writes scope=region/folders value=leaves
-bound-lock/1 about="two readings of one cell that do not meet, with both sides named" at=policy:region/forks by=target form=alphabet measure=text role=writes scope=region/forks value=lock
-bound-lock/1 about="what is still undecided, in bits, by region and by the epoch it was born in" at=policy:region/freedom by=target form=alphabet measure=text role=writes scope=region/freedom value=lock
-bound-lock/1 about="where looking is worth most, in bits per place" at=policy:region/gaze by=target form=alphabet measure=text role=writes scope=region/gaze value=lock
-bound-lock/1 about="lines that stand on one origin and are therefore not yet information" at=policy:region/grey by=target form=alphabet measure=text role=writes scope=region/grey value=lock
-bound-lock/1 about="the guide at resolution zero: five lines, the command that checks the place, how many conjectures are open, and that nothing else is asked" at=policy:region by=target form=alphabet measure=text role=writes scope=region/guide-at-zero value=lock
-bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=writes scope=region/harness value=harness/**
-bound-lock/1 about="the first screen: the mark the place is known by, its name, the badges its lock reads to, and the one line of what it is; what is not signed is not on it" at=policy:region by=target form=alphabet measure=text role=writes scope=region/hero value=lock
-bound-lock/1 about="the lines a later line replaced, with when they were replaced" at=policy:region/history by=target form=alphabet measure=text role=writes scope=region/history value=lock
-bound-lock/1 about="how the places rest on each other, drawn from the lock's dependency lines and folded until asked for" at=policy:region by=target form=alphabet measure=text role=writes scope=region/how-they-rest value=lock
-bound-lock/1 about="the whole idea in one picture, before any name is introduced" at=policy:region/idea by=target form=alphabet measure=text role=writes scope=region/idea value=prose
-bound-lock/1 about="what a repository of the place never holds, one line each" at=policy:region by=target form=alphabet measure=text role=writes scope=region/ignore value=lock
-bound-lock/1 about="the one line that installs it: the verb the lock names, then the name its manifest carries" at=policy:region by=target form=alphabet measure=text role=writes scope=region/install value=lock
-bound-lock/1 about="the theory of a place as its lists, each law with what met it and what would break it" at=policy:region/laws by=target form=alphabet measure=text role=writes scope=region/laws value=readings
-bound-lock/1 about="a page to learn from one example: the cell it draws, what it calls and prints, the law it shows, its form, and where it lives; the example is the one the page is named after" at=policy:region by=target form=alphabet measure=text role=writes scope=region/learn value=lock
-bound-lock/1 about="a page to learn from the in-phase example: the cell it draws, what it calls and prints, the law it shows, its form, and where it lives" at=policy:region by=target form=alphabet measure=text role=writes scope=region/learn-in-phase value=lock
-bound-lock/1 about="a page to learn from the price example: the cell it draws, what it calls and prints, the law it shows, its form, and where it lives" at=policy:region by=target form=alphabet measure=text role=writes scope=region/learn-price value=lock
-bound-lock/1 about="a page to learn from the signature example: the cell it draws, what it calls and prints, the law it shows, its form, and where it lives" at=policy:region by=target form=alphabet measure=text role=writes scope=region/learn-signature value=lock
-bound-lock/1 about="a page to learn from the thermometer example: the cell it draws, what it calls and prints, the law it shows, its form, and where it lives" at=policy:region by=target form=alphabet measure=text role=writes scope=region/learn-thermometer value=lock
-bound-lock/1 about="a page to learn from the withdrawal example: the cell it draws, what it calls and prints, the law it shows, its form, and where it lives" at=policy:region by=target form=alphabet measure=text role=writes scope=region/learn-withdrawal value=lock
-bound-lock/1 about="the licence, carried on a line of the lock and rendered into its own leaf" at=policy:region/license by=target form=alphabet measure=text role=writes scope=region/license value=lock
-bound-lock/1 about="the lock lines a place holds in its own files, unsigned, as they are written there" at=policy:region/lock-line by=target form=alphabet measure=text role=writes scope=region/lock-line value=leaves
-bound-lock/1 about="the manifest the place holds, rendered from the lines it signs about itself: the fields a consumer reads and the three a resolver older than exports still needs in this tree" at=policy:region/manifest by=target form=alphabet measure=text role=writes scope=region/manifest value=lock
-bound-lock/1 about="the legend of the marks a page is drawn in, in the owner's words" at=policy:region by=target form=alphabet measure=text role=writes scope=region/marks value=lock
-bound-lock/1 about="the notation of the object at a resolution: at zero the tuple a cell is; at one the tuple and the formulas of what it rests on, in the order they rest; at three each formula beside its law's sentence; at eight all of it with the signature of every arrow and the states" at=policy:region by=target form=alphabet measure=text role=writes scope=region/notation value=lock
-bound-lock/1 about="every operation offered, with how many vectors reached it" at=policy:region/offers by=target form=alphabet measure=text role=writes scope=region/offers value=readings
-bound-lock/1 about="every conjecture of the place, marked as such, with what would falsify it" at=policy:region by=target form=alphabet measure=text role=writes scope=region/open-conjectures value=lock
-bound-lock/1 about="the questions with no answer yet, widest first" at=policy:region/open-questions by=target form=alphabet measure=text role=writes scope=region/open-questions value=lock
-bound-lock/1 about="who spoke in each region of the tree, head and reader alike" at=policy:region/origins by=target form=alphabet measure=text role=writes scope=region/origins value=lock-and-readings
-bound-lock/1 about="what a place holds that nothing reaches: a test or a sample no demand names and no run reads, and a page no view writes and no demand needs" at=policy:region by=target form=alphabet measure=text role=writes scope=region/orphans value=lock
-bound-lock/1 about="what the theory proves and which views implement it" at=policy:region/paper by=target form=alphabet measure=text role=writes scope=region/paper value=prose
-bound-lock/1 about="the scale the shortest example draws: each claim as a bar and what they hold together beneath them" at=policy:region by=target form=alphabet measure=text role=writes scope=region/picture value=lock
-bound-lock/1 about="the release the forge makes after the tag: the version published once by the trusted publisher, and its tarball attached" at=policy:region by=target form=alphabet measure=text role=writes scope=region/pipeline-release value=lock
-bound-lock/1 about="the tag the forge makes for the version the manifest names, once" at=policy:region by=target form=alphabet measure=text role=writes scope=region/pipeline-tag value=lock
-bound-lock/1 about="the check the forge runs on every push and every proposal" at=policy:region by=target form=alphabet measure=text role=writes scope=region/pipeline-test value=lock
-bound-lock/1 about="each place the owner has said what it is, in the order they rest on each other, with its state as a colour and what the fold counts of it: paid, hazards open, and what the second head says" at=policy:region by=target form=alphabet measure=text role=writes scope=region/places value=lock
-bound-lock/1 about="the pages below the door, as links from the views that write them: the reference and the pages to learn from; the forge shows the guide and the licence itself" at=policy:region by=target form=alphabet measure=text role=writes scope=region/pointers value=lock
-bound-lock/1 about="what a line is worth beyond what it says, in bits still free" at=policy:region/premium by=target form=alphabet measure=text role=writes scope=region/premium value=lock
-bound-lock/1 about="the one line that says what this place is: claims, demands paid, ceilings met, what the second head said, and what a fold of it costs" at=policy:region/programs by=target form=alphabet measure=text role=writes scope=region/programs value=lock
-bound-lock/1 about="the lock a place is published with, seen from inside it: the bootstrap first, the wire and the keys it is read with, the regions it is written in, its own lines and every line a view of it reads, with the place's name gone from every scope, need, policy and cone; nothing of the tree's history and nothing that needs outside the place" at=policy:region by=target form=alphabet measure=text role=writes scope=region/published-lock value=lock
-bound-lock/1 about="the manifest the package carries, rendered from the same lines without the three fields only this tree's resolver reads: what npm packs and a consumer installs" at=policy:region/published-manifest by=target form=alphabet measure=text role=writes scope=region/published-manifest value=lock
-bound-lock/1 about="the receipts a place is published with: what it observed, seen from inside it, without the word the tree's second head gave, since the published place asks its own" at=policy:region by=target form=alphabet measure=text role=writes scope=region/published-receipts value=lock
-bound-lock/1 about="the open questions of a place, as the lock asks them" at=policy:region/question by=target form=alphabet measure=text role=writes scope=region/question value=lock
-bound-lock/1 about="the cell of an example drawn at a resolution: at zero three bars, above it each claim a bar, what they hold together a bar in the colour of a meeting, and its floor and its ceiling named" at=policy:region by=target form=alphabet measure=text role=writes scope=region/ranges value=lock
-bound-lock/1 about="which view answers which question, in the words each view says of itself" at=policy:region by=target form=alphabet measure=text role=writes scope=region/reading value=lock
-bound-lock/1 about="the regions spoken in less this epoch than last" at=policy:region/receding by=target form=alphabet measure=text role=writes scope=region/receding value=lock
-bound-lock/1 about="what a package carries of its own reading, so a clone folds without running anything" at=policy:region/receipts by=target form=alphabet measure=text role=writes scope=region/receipts value=readings
-bound-lock/1 about="every ceiling a reading is over, and every demand nothing paid" at=policy:region/red by=target form=alphabet measure=text role=writes scope=region/red value=lock
-bound-lock/1 about="every operation with its signature, its derived refusals, what it reaches and the laws it rests on; every law with its kind, view, premises, sentence and whether it reproduces; every form" at=policy:region by=target form=alphabet measure=text role=writes scope=region/reference value=lock
-bound-lock/1 about="how often each region of the tree was read" at=policy:region/region-frequency by=target form=alphabet measure=text role=writes scope=region/region-frequency value=readings
-bound-lock/1 about="the regions spoken in at more than two epochs" at=policy:region/resonance by=target form=alphabet measure=text role=writes scope=region/resonance value=lock
-bound-lock/1 about="what the object rests on, drawn: the definition most offers rest on and the lines it rests on, each by its name" at=policy:region by=target form=alphabet measure=text role=writes scope=region/rests value=lock
-bound-lock/1 about="how many of those epochs it was actually spoken in" at=policy:region/rhythm by=target form=alphabet measure=text role=writes scope=region/rhythm value=lock-and-readings
-bound-lock/1 about="whether a region holds without any one of its origins" at=policy:region/robustness by=target form=alphabet measure=text role=writes scope=region/robustness value=lock-and-readings
-bound-lock/1 about="what each leaf of the place is, written or rendered, so a page says which of its own files were never typed" at=policy:region/role by=target form=alphabet measure=text role=writes scope=region/role value=leaves
-bound-lock/1 about="where this place stands in the tree it belongs to" at=policy:region/scene by=target form=alphabet measure=text role=writes scope=region/scene value=lock
-bound-lock/1 about="the check a clone runs alone: the subpaths the manifest offers, imported, and the second head's signed word, verified against the key the lock admits and the digest of the lock itself" at=policy:region by=target form=alphabet measure=text role=writes scope=region/selfcheck value=lock
-bound-lock/1 about="the figure a region makes: a point, an edge, or a polygon" at=policy:region/shape by=target form=alphabet measure=text role=writes scope=region/shape value=lock-and-readings
-bound-lock/1 about="what it takes to sign here, and who may" at=policy:region/sign by=target form=alphabet measure=text role=writes scope=region/sign value=lock
-bound-lock/1 about="each key, what it has signed and what it may sign" at=policy:region/signers by=target form=alphabet measure=text role=writes scope=region/signers value=lock
-bound-lock/1 about="what a demand costs to pay and what paying it lands" at=policy:region/take by=target form=alphabet measure=text role=writes scope=region/take value=lock
-bound-lock/1 about="the obligatory as its definition says it, with the four states and the parts it is made of" at=policy:region by=target form=alphabet measure=text role=writes scope=region/the-object value=lock
-bound-lock/1 about="the paper: the owner's words on what it proves, then the reference a reader copies, its authors, year, title, version, publisher and address" at=policy:region by=target form=alphabet measure=text role=writes scope=region/the-paper value=lock
-bound-lock/1 about="four real calls and what each of them answers" at=policy:region/thirty-seconds by=target form=alphabet measure=text role=writes scope=region/thirty-seconds value=prose
-bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=writes scope=region/topos-measure value=topos-measure/**
-bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=writes scope=region/topos-typescript-artifacts value=topos-typescript-artifacts/**
-bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=writes scope=region/topos-typescript-concepts value=topos-typescript-concepts/**
-bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=writes scope=region/topos-typescript-packages value=topos-typescript-packages/**
-bound-lock/1 about="the cases a place holds and which of them did not hold, read from what the runner already answered rather than run again" at=policy:region/vectors by=target form=alphabet measure=text role=writes scope=region/vectors value=readings
-bound-lock/1 about="the three axioms the rest leans on hardest by their sentence, the others by name, and one theorem meeting its measurement" at=policy:region by=target form=alphabet measure=text role=writes scope=region/what-holds value=lock
-bound-lock/1 about="what is open in each place, folded until asked for: conjectures, hazards by kind, and demands not yet paid" at=policy:region by=target form=alphabet measure=text role=writes scope=region/what-is-open value=lock
-bound-lock/1 about="where the package goes next, in the owner's words, in four lines at most" at=policy:region by=target form=alphabet measure=text role=writes scope=region/where-next value=lock
-bound-lock/1 about="the prose a place keeps beside its source, read as paragraphs and never as headings" at=policy:region/why by=target form=alphabet measure=text role=writes scope=region/why value=leaves
-bound-lock/1 about="how many epochs a region spans, from its first line to its last" at=policy:region/width by=target form=alphabet measure=text role=writes scope=region/width value=lock-and-readings
-bound-lock/1 at=policy:capsule/customisation-is-the-places-lines by=target form=interval measure=count role=reads scope=source/customised/src/** value=0..0
-bound-lock/1 at=policy:capsule/language-facts-come-from-the-language-capsule by=target form=interval measure=count role=reads scope=source/lexed/src/** value=0..0
-bound-lock/1 at=policy:source by=target form=interval measure=longest role=reads scope=source/longest/src/** value=0..40
-bound-lock/1 at=policy:capsule/reads-lines-and-receipts-only by=target form=interval measure=count role=reads scope=source/unread/src/** value=0..0
-bound-lock/1 at=policy:theme by=target form=alphabet measure=id role=writes scope=theme value=green:2da44e:●|grey:8c959f:○|red:cf222e:✕|fork:8250df:⋔|text:59636e|text-dark:9198a1|text-on:ffffff
-bound-lock/1 at=policy:author by=target form=alphabet measure=id needs=package.json role=writes scope=author shape=package.json value=Lapxo
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/allowImportingTsExtensions shape=tsconfig.json value=true
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/declaration shape=tsconfig.json value=true
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/esModuleInterop shape=tsconfig.json value=true
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/forceConsistentCasingInFileNames shape=tsconfig.json value=true
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/include shape=tsconfig.json value=src
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/incremental shape=tsconfig.json value=true
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/module shape=tsconfig.json value=NodeNext
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/moduleResolution shape=tsconfig.json value=NodeNext
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/noFallthroughCasesInSwitch shape=tsconfig.json value=true
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/noImplicitOverride shape=tsconfig.json value=true
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/noImplicitReturns shape=tsconfig.json value=true
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/outDir shape=tsconfig.json value=dist
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/rewriteRelativeImportExtensions shape=tsconfig.json value=true
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/rootDir shape=tsconfig.json value=src
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/skipLibCheck shape=tsconfig.json value=true
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/strict shape=tsconfig.json value=true
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/target shape=tsconfig.json value=ES2020
-bound-lock/1 at=policy:build by=target form=alphabet measure=id needs=tsconfig.json role=writes scope=build/tsBuildInfoFile shape=tsconfig.json value=.cache/tsbuildinfo
-bound-lock/1 at=policy:check by=target form=alphabet measure=id needs=package.json role=writes scope=check value="npm ci && npm run build"
-bound-lock/1 at=policy:dependencies by=target form=alphabet measure=id needs=package.json role=writes scope=dependencies shape=package.json value=@lapxo/topos@^0.1.0
-bound-lock/1 at=policy:engines by=target form=alphabet measure=id needs=package.json role=writes scope=engines shape=package.json value=">=22.12"
-bound-lock/1 at=policy:exports by=target form=alphabet measure=id needs=package.json role=writes scope=exports shape=package.json value=dist/index
-bound-lock/1 at=policy:ignore by=target form=alphabet measure=id role=writes scope=ignore value=.bound/|dist/|node_modules/|.cache/
-bound-lock/1 at=policy:install by=target form=alphabet measure=id needs=package.json role=writes scope=install value="npm install"
-bound-lock/1 at=policy:keywords by=target form=alphabet measure=id needs=package.json role=writes scope=keywords shape=package.json value=topos|capsule|forge|render
-bound-lock/1 at=policy:lang by=target form=alphabet measure=id role=writes scope=lang value=en
 bound-lock/1 at=policy:license by=target form=alphabet measure=id needs=package.json role=writes scope=license shape=package.json value=MIT
+bound-lock/1 at=policy:local-fold-journal by=target form=alphabet measure=class role=reads scope=keys/fold value=fold
 bound-lock/1 at=policy:name by=target form=alphabet measure=id needs=package.json role=writes scope=name shape=package.json value=@lapxo/topos-github
+bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/cell value="floor=⊥|ceiling=⊤|origins=O|rest=⊑"
+bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/claim value="who=origin|lo=span.lo|hi=span.hi|without=takes"
+bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/formulas value=law/D11-the-obligatory|law/A1-encounter|law/A7-freedom-conserved|law/T49-amplitude-has-sign-and-phase|law/T95-signatures-live-where-they-are-signed|law/T87-the-quarter-turn|law/D3-state
+bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/gloss value="over L at r"
+bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/glue value="open=⟨|close=⟩|member=∈|product=×|maps=→|iff=⟺"
+bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/moves value=vectors/moves.json
+bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/named value=string|number|boolean
+bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/object value=law/D11-the-obligatory
+bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/renders value="FREE=green|REQUIRED=grey|FORBIDDEN=red|CONFLICT=fork"
+bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/states value="bounds that cross=CONFLICT|one origin=REQUIRED|claims that do not meet=CONFLICT|claims that meet and fit the bounds=FREE|claims that meet outside the bounds=FORBIDDEN"
+bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/symbols value="object=c|state=state"
+bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/types value="Origin=(o, φ)|Act=s|State=state"
+bound-lock/1 at=policy:open by=target form=alphabet measure=id role=writes scope=open/who value="for a ledger=H1-uncertainty|for a ledger=H2-density-attracts|for a mathematician=H4-enriched-semilattice|for a mathematician=H9-the-obligatory-is-maximal|readings=H3-a-distant-signature-moves-a-cell-that-did-not-move|readings=H5-hilbert-is-the-obligatory-without-four-fields|readings=H6-structure-of-measurement|readings=H7-the-medium-of-encounters|readings=H8-refereed-game"
+bound-lock/1 at=policy:pages/mode by=target form=interval measure=prose-marks role=reads scope=audit/docs-have-a-mode value=0..0
+bound-lock/1 at=policy:pages/same by=target form=interval measure=rendered-leaves-differ role=reads scope=audit/rendered-docs-match value=0..0
 bound-lock/1 at=policy:pipeline by=target form=alphabet measure=id role=writes scope=pipeline/branch value=main
 bound-lock/1 at=policy:pipeline by=target form=alphabet measure=id role=writes scope=pipeline/environment value=release
 bound-lock/1 at=policy:pipeline by=target form=alphabet measure=id role=writes scope=pipeline/node value=22|24
@@ -436,31 +434,70 @@ bound-lock/1 at=policy:pipeline by=target form=alphabet measure=id role=writes s
 bound-lock/1 at=policy:pipeline by=target form=alphabet measure=id role=writes scope=pipeline/published value="npm view"
 bound-lock/1 at=policy:pipeline by=target form=alphabet measure=id role=writes scope=pipeline/registry value=https://registry.npmjs.org
 bound-lock/1 at=policy:pipeline by=target form=alphabet measure=id role=writes scope=pipeline/trusted-publisher value=pending
+bound-lock/1 at=policy:place/dist by=target form=interval measure=shipped-beside-code role=reads scope=audit/dist-holds-js-and-dts value=0..0
+bound-lock/1 at=policy:place/orphans by=target form=interval measure=orphan-samples role=reads scope=audit/orphans value=0..0
+bound-lock/1 at=policy:place/removal by=target form=interval measure=removed-by-hand role=reads scope=audit/nothing-is-removed-by-hand value=0..0
+bound-lock/1 at=policy:reader by=target form=alphabet kind=js measure=reader needs=src/ role=reads scope=reader/said/source shape=*.ts value=topos-typescript-tree/src/regions/said.ts
+bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=reads scope=region/said value=src/**/*.ts
+bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=reads scope=region/source value=src/**/*.ts
+bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=reads scope=region/vocabulary value=src/**/*.ts
+bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=writes scope=region/harness value=harness/**
+bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=writes scope=region/topos-measure value=topos-measure/**
+bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=writes scope=region/topos-typescript-artifacts value=topos-typescript-artifacts/**
+bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=writes scope=region/topos-typescript-concepts value=topos-typescript-concepts/**
+bound-lock/1 at=policy:region by=target form=alphabet measure=coordinates role=writes scope=region/topos-typescript-packages value=topos-typescript-packages/**
+bound-lock/1 at=policy:release by=target form=alphabet measure=id role=demands scope=release/rebirth value=rebirth
 bound-lock/1 at=policy:repository by=target form=alphabet measure=id needs=package.json role=writes scope=repository shape=package.json value=https://github.com/lapxo/topos-github
 bound-lock/1 at=policy:scripts by=target form=alphabet measure=id needs=package.json role=writes scope=scripts/build shape=package.json value="tsc --build"
+bound-lock/1 at=policy:security/acts by=target form=interval measure=acts-on-unnamed-hosts role=reads scope=audit/agent-acts-are-effects value=0..0
 bound-lock/1 at=policy:sideEffects by=target form=alphabet measure=id needs=package.json role=writes scope=sideEffects shape=package.json value=false
+bound-lock/1 at=policy:source by=target form=interval measure=longest role=reads scope=source/longest/src/** value=0..40
 bound-lock/1 at=policy:sources by=target form=alphabet measure=id role=writes scope=sources/badges value=https://img.shields.io/badge
+bound-lock/1 at=policy:theme by=target form=alphabet measure=id role=writes scope=theme value=green:2da44e:●|grey:8c959f:○|red:cf222e:✕|fork:8250df:⋔|text:59636e|text-dark:9198a1|text-on:ffffff
+bound-lock/1 at=policy:topos/bounded-readers by=target form=alphabet measure=id role=writes scope=reader/empty value=required
+bound-lock/1 at=policy:topos/bounded-readers by=target form=alphabet measure=id role=writes scope=reader/inputs value=required
+bound-lock/1 at=policy:topos/bounded-readers by=target form=interval measure=bytes role=writes scope=reader/response-bytes value=0..67108864
+bound-lock/1 at=policy:topos/bounded-readers by=target form=interval measure=milliseconds role=writes scope=reader/timeout value=0..30000
 bound-lock/1 at=policy:topos/capsule-length by=target form=interval measure=count role=reads scope=src/lines value=0..400
 bound-lock/1 at=policy:topos/region-length by=target form=interval measure=per-file role=reads scope=src/regions/**/lines value=0..40
+bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=form/template/wire/canonical value=hash
+bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=form/template/wire/encoding value=encoding
+bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=form/template/wire/header value=header
+bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=form/template/wire/lead value=header|encoding
+bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=form/template/wire/order value=encoding
+bound-lock/1 at=policy:tree/comments-few by=target form=interval measure=per-file role=reads scope=comments/*/src/** value=0..3
 bound-lock/1 at=policy:type by=target form=alphabet measure=id needs=package.json role=writes scope=type shape=package.json value=module
-bound-lock/1 at=policy:uses by=target form=alphabet measure=id role=writes scope=uses/topos value=sha256:9bd23c16b52258e2a2f56f516887aef384b799bd8b54d133e9f82c4aa99c9e2f
-bound-lock/1 at=policy:uses by=target form=alphabet measure=id role=writes scope=uses/topos-bound value=sha256:8742250a27d7848a731c72f2f6296a3527ff68e0b5232c6afd44e0d2b666ee92
-bound-lock/1 at=policy:uses by=target form=alphabet measure=id role=writes scope=uses/topos-doc value=sha256:713f7604d1feef271d0f4f81495422b35c81f0d757e06866d088728715d60112
-bound-lock/1 at=policy:uses by=target form=alphabet measure=id role=writes scope=uses/topos-frame value=sha256:51af4be51da524873b2d4debdf5c0026182e005076a39965f2b42223bb5a818e
-bound-lock/1 at=policy:uses by=target form=alphabet measure=id role=writes scope=uses/topos-github value=sha256:f58cd403038adc9e552fe8452ffeba8e182ebc5b46a9fb2af66e1391363566a3
-bound-lock/1 at=policy:view/license by=target form=alphabet measure=id role=demands scope=view/license shape=LICENSE value=license
-bound-lock/1 at=place:topos-measure/release by=target form=alphabet measure=id role=demands scope=view/pipeline-release shape=.github/workflows/release.yml value=github-actions
-bound-lock/1 at=policy:view by=target form=alphabet measure=id needs=docs/reference.md role=demands scope=view/reference-capsule shape=docs/reference.md value=regions
 bound-lock/1 at=policy:view by=target form=alphabet measure=id role=demands scope=view/reference-capsule shape=docs/reference.md value=regions
-bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/formulas value=law/D11-the-obligatory|law/A1-encounter|law/A7-freedom-conserved|law/T49-amplitude-has-sign-and-phase|law/T95-signatures-live-where-they-are-signed|law/T87-the-quarter-turn|law/D3-state
-bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/states value="bounds that cross=CONFLICT|one origin=REQUIRED|claims that do not meet=CONFLICT|claims that meet and fit the bounds=FREE|claims that meet outside the bounds=FORBIDDEN"
-bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/glue value="open=⟨|close=⟩|member=∈|product=×|maps=→|iff=⟺"
-bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/cell value="floor=⊥|ceiling=⊤|origins=O|rest=⊑"
-bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/types value="Origin=(o, φ)|Act=s|State=state"
-bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/gloss value="over L at r"
-bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/claim value="who=origin|lo=span.lo|hi=span.hi|without=takes"
-bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/moves value=vectors/moves.json
-bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/named value=string|number|boolean
-bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/object value=law/D11-the-obligatory
-bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/renders value="FREE=green|REQUIRED=grey|FORBIDDEN=red|CONFLICT=fork"
-bound-lock/1 at=policy:notation by=target form=alphabet measure=id role=writes scope=notation/symbols value="object=c|state=state"
+bound-lock/1 at=policy:view/license by=target form=alphabet measure=id role=demands scope=view/license shape=LICENSE value=license
+bound-lock/1 at=policy:wire/region-measures by=target form=alphabet measure=id role=reads scope=audit/wire/region-measures value=coordinates|leaves
+bound-lock/1 at=policy:wire/shapes by=target form=alphabet measure=id role=reads scope=audit/wire/shapes value=decision|lock|package|reader|render|run|vector|view
+bound-lock/1 at=policy:wire/states by=target form=alphabet measure=id role=reads scope=audit/wire/states value=absent|present|unread|withdraw
+bound-lock/1 at=policy:wire/templates by=target form=alphabet measure=id role=reads scope=audit/wire/templates value={cone}|{roots}
+bound-lock/1 at=witness:native-receipts-ship-with-the-place by=target form=alphabet measure=id role=reads scope=audit/wire/ships value=dist|README.md|LICENSE|TARGET.bound|receipts.bound
+bound-lock/1 at=witness:native-render-release by=target form=alphabet measure=id needs=package.json role=writes scope=version shape=package.json value=0.1.3
+bound-lock/1 at=witness:own-page-from-own-prose by=target form=alphabet measure=id needs=README.md role=demands scope=view/readme-capsule shape=README.md value=hero|idea
+bound-lock/1 at=witness:own-store-never-ships by=target form=alphabet measure=id role=demands scope=view/gitignore shape=.gitignore value=ignore
+bound-lock/1 at=witness:portable-native-receipts by=target form=alphabet measure=id role=demands scope=view/receipts shape=receipts.bound value=receipts@8|receipts@0|receipts@1
+bound-lock/1 at=witness:published-render-contract by=target form=alphabet measure=id needs=package.json role=writes scope=dependencies shape=package.json value=@lapxo/topos@0.1.12
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=digest needs=topos-typescript-tree role=reads scope=dep/typescript-reader value=sha256:ecf86c50adacb3e199e7363fb355ad66d7c76a76ab1e007836d9e9fbc74ad434
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=digest needs=topos-typescript-tree/node_modules/@lapxo/obligations role=reads scope=dep/typescript-reader-algebra shape=package value=sha256:e4b48f480e86c2e1b9518b7a5dbe18e4b4dfa449961c781a291295fa85a3ec72
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=digest needs=topos-typescript-tree/node_modules/@lapxo/topos role=reads scope=dep/typescript-reader-sdk shape=package value=sha256:21e030acdc0d825e183b30f94d400daf351b02f782d474635f246de9e6e12b83
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=digest needs=topos-typescript-tree/node_modules/typescript role=reads scope=dep/typescript-reader-compiler value=sha256:9dc6ee1f8dec9598cbecff5e2fcf2b916d04294c0615588dd424448a5a3afce5
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=digest role=writes scope=dep/topos-doc shape=dist/index.js value=sha256:1b9fa141c118669a69ffee76d049b23c6bf68eb07f524aa7b89dd873bcde68eb
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=digest role=writes scope=dep/topos-github shape=dist/index.js value=sha256:0a0ce9bac2dd52a5620691a26960f69ac013642bfd9a51a374ab998f7d780a7a
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=digest role=writes scope=dep/topos-node shape=dist/index.js value=sha256:859ee30f9eaed96edfdfd8d72834a18ebb82022d9c7ceea52e66409241f2cfb6
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=digest role=writes scope=uses/topos-doc value=sha256:65bfa43e2d5122db2d516afe516921d52fc22647fb092d55e313c25c5a2d9b52
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=digest role=writes scope=uses/topos-github value=sha256:af59e6e41b8da160bf746ba4319a6bf138491c7f409c7f187f747ae7c247b7f1
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=digest role=writes scope=uses/topos-node value=sha256:c7cfad66c15e3fb1d2cd71de9eabf70898723ea45f402987c7b8136729bfabd4
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=id needs=.github/workflows/tag.yml role=demands scope=view/pipeline-tag shape=.github/workflows/tag.yml value=github-actions@1
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=id needs=.github/workflows/test.yml role=demands scope=view/pipeline-test shape=.github/workflows/test.yml value=github-actions@1
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=id needs=package.json role=demands scope=view/manifest shape=package.json value=manifest
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=id needs=package.json role=writes scope=devDependencies shape=package.json value=@types/node@^22|typescript@5.9.3
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=id needs=package.json role=writes scope=scripts/test shape=package.json value="node --test test/*.test.ts"
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=id needs=tsconfig.json role=demands scope=view/tsconfig shape=tsconfig.json value=build
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=id role=demands scope=view/closure value=red|programs
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=id role=writes scope=docs/badges value=license
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=id role=writes scope=pipeline/check value="npm run build && npm test"
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=id role=writes scope=pipeline/install value="npm ci"
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=id role=writes scope=pipeline/release/digest-command value=sha256sum
+bound-lock/1 at=witness:verified-render-contract by=target form=alphabet measure=id role=writes scope=wire/receipt-fields value=scope|role|measure|form|value|at

@@ -1,34 +1,9 @@
 # @lapxo/topos-github
 
-![version 0.1.2](https://img.shields.io/badge/version-0.1.2-8c959f) ![license MIT](https://img.shields.io/badge/license-MIT-8c959f) ![node >=22.12](https://img.shields.io/badge/node-%3E%3D22.12-8c959f) ![dependencies 1](https://img.shields.io/badge/dependencies-1-8c959f) ![cases 0 hold](https://img.shields.io/badge/cases-0_hold-8c959f) ![verify none](https://img.shields.io/badge/verify-none-8c959f)
+![license MIT](https://img.shields.io/badge/license-MIT-8c959f)
 
 The forge a place asks for, rendered from its lines: the workflows that test, tag and release it, and what its repository never holds.
 
 ## Why a line
 
 A workflow is a line of the place. A release is the tag that workflow cuts. A repository holds only what its ignore line allows.
-
-## One repository
-
-<p align="center"><img src="docs/img/world.svg" alt="declares , runs on , reaches, 3 regions, the longest of them 0 lines, 0 vector files, each held from the blob, pinned by topos-github and run by the host" width="640"></p>
-
-## Line
-
-Add to your lock:
-sources/topos-github value=github:Lapxo/topos-github
-uses/topos-github sha256:<release digest>
-https://github.com/Lapxo/topos-github/releases
-Fetch the release asset, verify its sha256 equals the uses/ line, place it in bound/cas/blobs/. Fold: its pages appear.
-open: line/install needs=host/resolve — when bound resolves sources/ itself, the fetch line leaves the page by fold.
-
-It rests on topos.
-
-## Check
-
-● 0 cases hold
-
-● `npm ci && npm run build`
-
-## Pointers
-
-- [Reference](docs/reference.md)

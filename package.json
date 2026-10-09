@@ -1,6 +1,6 @@
 {
   "name": "@lapxo/topos-github",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "The forge a place asks for, rendered from its lines: the workflows that test, tag and release it, and what its repository never holds.",
   "type": "module",
   "license": "MIT",
@@ -30,12 +30,18 @@
     "dist",
     "README.md",
     "LICENSE",
-    "TARGET.bound"
+    "TARGET.bound",
+    "receipts.bound"
   ],
   "scripts": {
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "test": "node --test test/*.test.ts"
   },
   "dependencies": {
-    "@lapxo/topos": "^0.1.0"
+    "@lapxo/topos": "0.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "5.9.3"
   }
 }
