@@ -19,9 +19,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - env:
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - id: artifact
+        env:
           GH_TOKEN: ${{ github.token }}
         run: |
           version="v$(node -p "require('./package.json').version")"
-          gh release view "$version" >/dev/null 2>&1 && exit 0
-          gh release create "$version" "$(npm pack --silent)" --title "$version" --notes "$version"
+          asset="$(npm pack --silent)"
+          test -f "$asset"
+          expected="$(sha256sum "$asset")"
+          if ! gh release view "$version" >/dev/null 2>&1; then
+            gh release create "$version" "$asset" --title "$version" --notes "$version"
+          fi
+          gh release download "$version" --pattern "$(basename "$asset")" --dir "$RUNNER_TEMP/release-back"
+          actual="$(sha256sum "$RUNNER_TEMP/release-back/$(basename "$asset")")"
+          test "${expected%% *}" = "${actual%% *}"
